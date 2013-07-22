@@ -106,11 +106,6 @@ strong {
 	padding-bottom: 8px;
 }
 
-.ui-header .header-button {
-	float: left;
-	margin-left: 15px;
-}
-
 .ui-header > * {
 	display: inline-block;
 }
@@ -131,8 +126,47 @@ strong {
 	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
 }
 
+.forros-map-menu {
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    height: 100%;
+    background-color: #e2001a;
+}
+
 .forros-tooltip-popup {
     background-color: #e2001a;
     color: #fff;
     text-shadow: none;
+}
+
+.pac-container {
+    margin-top: 1%;
+    background-color: #e2001a;
+    border: none;
+}
+.pac-item {
+    color: #fff;
+    padding: 20px;
+}
+
+.pac-item:hover {
+    color: #87888a;
+    padding: 20px;
+}
+
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+    font-family: "Gotham Round", sansserif;
+}
+
+.nomargin {
+    margin: 0px;
+    padding: 0px;
+}
+#forros-calle .ui-input-text {
+    /* padding: 10px; */
+    margin: 10px;
+}
+#forros-calle #geocomplete {
+    border-radius: 0;
 }

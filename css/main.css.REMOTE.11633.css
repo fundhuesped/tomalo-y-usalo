@@ -136,3 +136,28 @@ strong {
     color: #fff;
     text-shadow: none;
 }
+
+.ui-content {
+	overflow-x: visible;
+	overflow-y: visible;
+	padding: 0;
+	margin-top: 15px;
+	color: #00a4a7;
+	font-size: 18pt;
+}
+
+.ui-link {
+	margin-top: 45px;
+	color: #00a4a7;
+	font-size: 18pt;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.ubicame-icon-link { 
+	margin-top: 60px;
+}
+
+.buscar-icon-link strong, .ubicame-icon-link strong {
+	vertical-align: middle;
+}

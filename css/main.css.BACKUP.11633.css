@@ -131,8 +131,74 @@ strong {
 	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
 }
 
+.forros-map-menu {
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    height: 100%;
+    background-color: #e2001a;
+}
+
 .forros-tooltip-popup {
     background-color: #e2001a;
     color: #fff;
     text-shadow: none;
 }
+
+<<<<<<< HEAD
+.pac-container {
+    margin-top: 1%;
+    background-color: #e2001a;
+    border: none;
+}
+.pac-item {
+    color: #fff;
+    padding: 20px;
+}
+
+.pac-item:hover {
+    color: #87888a;
+    padding: 20px;
+}
+
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+    font-family: "Gotham Round", sansserif;
+}
+
+.nomargin {
+    margin: 0px;
+    padding: 0px;
+}
+#forros-calle .ui-input-text {
+    /* padding: 10px; */
+    margin: 10px;
+}
+#forros-calle #geocomplete {
+    border-radius: 0;
+}
+=======
+.ui-content {
+	overflow-x: visible;
+	overflow-y: visible;
+	padding: 0;
+	margin-top: 15px;
+	color: #00a4a7;
+	font-size: 18pt;
+}
+
+.ui-link {
+	margin-top: 45px;
+	color: #00a4a7;
+	font-size: 18pt;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.ubicame-icon-link { 
+	margin-top: 60px;
+}
+
+.buscar-icon-link strong, .ubicame-icon-link strong {
+	vertical-align: middle;
+}
+>>>>>>> 608e96a29692d73022958e1ae9d1fc9b4cd804ad

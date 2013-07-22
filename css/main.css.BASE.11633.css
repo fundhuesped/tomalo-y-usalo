@@ -106,11 +106,6 @@ strong {
 	padding-bottom: 8px;
 }
 
-.ui-header .header-button {
-	float: left;
-	margin-left: 15px;
-}
-
 .ui-header > * {
 	display: inline-block;
 }

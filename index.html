@@ -28,8 +28,8 @@
  
         <link rel="stylesheet" type="text/css" href="spec/jquery-mobile/jquery.mobile.css" />
         <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
-        <script src="spec/gmaps.js/jquery.geocomplete.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.uncompressed.js"></script>
         <script type="text/javascript" src="js/forros.js"></script>
         <title>Hello World</title>
@@ -43,17 +43,21 @@
         </script> 
     </head>
     <body>
-        <div data-role="page" id="start">
+        <div data-role="page" id="start" class="flex-container row">
             <!-- content -->
-            <div data-role="content">
-                <div class="">
-                    <h1>Fundacion Huesped</h1>
-                </div>
-                <p>
-                    <a href="#test-menu" data-role="button" data-theme="a" data-inline="true">Test</a>
-                    <a href="#forros-menu" data-role="button" data-theme="b" data-inline="true">Forros</a>
-                </p>
+            <div></div>
+            <div data-role="content" class="flex-container-column-center">
+				<a href="#forros-menu" id="busca-test-main-link">
+					<img src="img/busca-test.png" id="busca-test-image"/>
+				</a>
+				<a href="#test-menu" id="busca-preservativo-main-link">
+					<img src="img/busca-preservativo.png" id="busca-preservativo-image"/>
+				</a>
             </div>
+			<div class="flex-container-nowrap">
+				<p class="flex-item-nowrap">Info start</p>
+				<p class="flex-item-nowrap">Info end</p>
+			</div>
             <!-- /content -->
         </div>
 

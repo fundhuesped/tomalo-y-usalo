@@ -1,5 +1,7 @@
-
+        
       function main_forro() {
+          
+        
         var mapa;
           // create google maps map
         var mapOptions = {
@@ -10,9 +12,19 @@
         //inicializa mapa
         mapa = new google.maps.Map(document.getElementById('forros-map'), mapOptions);
         //geocoder
+        
+        $('#forros-map').width($(window).width());
+        $('#forros-map').height($(window).height());
+          
+    google.maps.event.trigger(mapa, 'resize'); 
+        
+        
         $("#geocomplete").geocomplete({
             map: mapa,
             country: 'ar'
+        }).bind("geocode:result", function(event, result){
+            $(".forros-map-menu").toggle();
+            
         });
         var mapeo =  $("#geocomplete").geocomplete("forros-map"); 
         //agrega layer de cartoDB
@@ -20,7 +32,10 @@
         .addTo(mapa)
         .on('done', function(layer) {
            
-          
+          $(window).resize(function() {
+             $('#forros-map').width($(window).width());
+             $('#forros-map').height($(window).height());
+          });
           var sublayer = layer.getSubLayer(0);
   
           sublayer.infowindow.set('template', $('#infowindow_template').html());

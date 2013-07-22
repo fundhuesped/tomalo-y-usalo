@@ -131,6 +131,75 @@ strong {
 	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
 }
 
+
+
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+    font-family: "Gotham Round", sansserif;
+}
+
+.nomargin {
+    margin: 0px;
+    padding: 0px;
+}
+
+.forros-map-menu {
+    position: absolute;
+    z-index: 1000;
+    width: 80%;
+    height: 100%;
+    background-color: #e2001a;
+}
+
+.forros-map-menu .ui-btn-corner-all {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+     margin: 10px;
+}
+
+#forros-calle .ui-input-text {
+    /* padding: 10px; */
+    margin: 10px;
+}
+#forros-calle #geocomplete {
+    border-radius: 0;
+}
+#forros-calle a.ui-input-clear {
+    //display: none;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.pac-container {
+    margin-top: 1%;
+    margin-left: 0;
+    /* margin-left: 1%; */
+    background-color: transparent;
+    border: none;
+}
+.pac-item {
+    color: #fff;
+    padding: 20px;
+}
+
+.pac-item:hover {
+    color: #87888a;
+    padding: 20px;
+}
+
+.pac-container:after {
+    background-image: none;
+}
+
+.ui-btn-up-c {
+    border: none;
+}
+
+div.cartodb-popup .jspContainer:before {
+    background: none;
+}
+
 .forros-tooltip-popup {
     background-color: #e2001a;
     color: #fff;

@@ -101,7 +101,27 @@ strong {
 	color: white;
 	background-color: #00a4a7;
 	text-align: center;
-	font-size: 22pt;
+	font-size: 20pt;
 	padding-top: 15px;
 	padding-bottom: 8px;
+}
+
+.ui-header > * {
+	display: inline-block;
+}
+
+.ui-header .icon-bar {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background-color: white;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: 4px;
+	color: #ffffff;
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 0x 0px rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 0px 0px rgb(255, 255, 255);
+	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
 }

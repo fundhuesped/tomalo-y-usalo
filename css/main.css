@@ -62,6 +62,8 @@
 }
 
 #busca-test-main-link, #busca-preservativo-main-link {
-	width: 133px;
-	height: 133px;
+	min-width: 133px;
+	min-height: 133px;
+	padding: 0;
+	margin: 0;
 }

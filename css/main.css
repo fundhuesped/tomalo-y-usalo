@@ -9,12 +9,6 @@
 	flex-flow: row wrap !important;
 }
 
-.flex-container .row > *, .flex-container-column-center > * {
-	padding: 10px;
-	-webkit-flex: 1 100%;
-	flex: 1 100%;
-}
-
 .flex-container-column-center {
 	display: -webkit-box;
 	display: -moz-box;
@@ -24,6 +18,14 @@
 	display: flex;
 	-webkit-flex-flow: column wrap;
 	flex-flow: column wrap;
+}
+
+.flex-container .row > *, .flex-container-column-center > * {
+	padding: 10px;
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+	-webkit-align-self: center;
+	align-self: center;
 }
 
 .flex-container-nowrap {

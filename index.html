@@ -43,17 +43,17 @@
         </script> 
     </head>
     <body>
-        <div data-role="page" id="start">
+        <div data-role="page" id="start" class="flex-container row">
             <!-- content -->
-            <div data-role="content">
-                <div class="">
-                    <h1>Fundacion Huesped</h1>
-                </div>
-                <p>
-                    <a href="#test-menu" data-role="button" data-theme="a" data-inline="true">Test</a>
-                    <a href="#forros-menu" data-role="button" data-theme="b" data-inline="true">Forros</a>
-                </p>
+            <div></div>
+            <div data-role="content" class="flex-container-column-center">
+				<a href="#test-menu" data-role="button" data-theme="a" data-inline="true">Test</a>
+				<a href="#forros-menu" data-role="button" data-theme="b" data-inline="true">Forros</a>
             </div>
+			<div class="flex-container-nowrap">
+				<p class="flex-item-nowrap">Info start</p>
+				<p class="flex-item-nowrap">Info end</p>
+			</div>
             <!-- /content -->
         </div>
 

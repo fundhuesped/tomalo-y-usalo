@@ -6936,10 +6936,10 @@ require('cordova/channel').onNativeReady.fire();
         injectPluginScript();
     };
     try { // we commented we were going to try, so let us actually try and catch
-        xhr.open('GET', plugins_json, true); // Async
-        xhr.send();
+       // xhr.open('GET', plugins_json, true); // Async
+       // xhr.send();
     } catch(err){
-        injectPluginScript();
+       // injectPluginScript();
     }
 }(window));
 

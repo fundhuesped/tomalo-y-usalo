@@ -67,3 +67,12 @@
 	padding: 0;
 	margin: 0;
 }
+
+.forros-tooltip-popup {
+    background-color: #e2001a;
+    color: #fff;
+    text-shadow: none;
+}
+
+.forros-tooltip-popup strong {
+}

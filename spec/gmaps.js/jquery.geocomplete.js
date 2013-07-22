@@ -123,14 +123,24 @@
       var options = $.extend(this.options.markerOptions, { map: this.map });
 
       if (options.disabled){ return; }
-
+      options.zoom = 15;
       this.marker = new google.maps.Marker(options);
+      
+      var circle = new google.maps.Circle({
+        map: this.map,
+        radius: 500,    // 10 miles in metres
+        fillColor: '#a2001e',
+        strokeWeight: 0 
+      });
+      circle.bindTo('center', this.marker, 'position');
+      this.map.setZoom(8);
+      google.maps.event.addListener(this.marker,'dragend', function() {
+        this.map.setZoom(15);
+      });
+      google.maps.event.addListener(this.marker, 'click', function() {
+        this.map.setZoom(15);
+      });
 
-      google.maps.event.addListener(
-        this.marker,
-        'dragend',
-        $.proxy(this.markerDragged, this)
-      );
     },
 
     // Associate the input with the autocompleter and create a geocoder

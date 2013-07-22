@@ -27,7 +27,7 @@
         <script type="text/javascript" src="spec/jquery-mobile/jquery.mobile.js"></script>
  
         <link rel="stylesheet" type="text/css" href="spec/jquery-mobile/jquery.mobile.css" />
-        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+        <link rel="stylesheet" type="text/css" href="css/cartodb.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
         <script src="spec/gmaps.js/jquery.geocomplete.js"></script>
@@ -156,14 +156,29 @@
                 </div><!-- /navbar -->
             </div><!-- /footer -->
         </div>
-        
-        
-        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script>
             app.initialize();
         </script>
-      
+        <script type="infowindow/html" id="infowindow_template">
+            
+            <div class="cartodb-popup">
+              <a href="#close" class="cartodb-popup-close-button close">x</a>
+
+               <div class="cartodb-popup-content-wrapper forros-tooltip-popup">
+                 <div class="cartodb-popup-content">
+                   <h3>{{content.data.establecimiento}}</h3>
+                   <!-- content.data contains the field info -->
+                   <h4> {{content.data.calle}} {{content.data.altura}}</h4>
+                   <h4> <strong>Horario:</strong> {{content.data.horario_atencion}}</h4>
+                   <h4> <strong>Teléfono:</strong> {{content.data.tel_estab}}</h4>
+                   <h4> <strong>Barrio:</strong> {{content.data.barrio_localidad}}</h4>
+                   <h4> {{content.data.provincia}}</h4>
+                 </div>
+               </div>
+               <div class="cartodb-popup-tip-container"></div>
+            </div>
+        </script>
     </body>
 </html>

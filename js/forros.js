@@ -22,17 +22,19 @@
            
           
           var sublayer = layer.getSubLayer(0);
+  
+          sublayer.infowindow.set('template', $('#infowindow_template').html());
           sublayer.on('featureOver', function(e, pos, latlng, data) {
-            cartodb.log.log(e, pos, latlng, data);
+            
           });
 
           sublayer.on('error', function(err) {
-            cartodb.log.log('error: ' + err);
+            
           });
 
         })
         .on('error', function(error) {
-          cartodb.log.log(error);
+          
         });
 
       };

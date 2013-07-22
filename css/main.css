@@ -60,3 +60,8 @@
 	margin-left: auto;
 	text-align: right;
 }
+
+#busca-test-main-link, #busca-preservativo-main-link {
+	width: 133px;
+	height: 133px;
+}

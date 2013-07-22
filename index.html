@@ -44,10 +44,10 @@
         </script> 
     </head>
     <body>
-        <div data-role="page" id="start" class="flex-container row">
+        <div data-role="page" id="start" class="flex-container row" data-theme="none">
             <!-- content -->
-            <div></div>
-            <div data-role="content" class="flex-container-column-center">
+            <div data-role="content" data-theme="none">&nbsp;</div>
+            <div data-role="content" class="flex-container-column-center" data-theme="none">
 				<a href="#forros-menu" id="busca-test-main-link">
 					<img src="img/busca-test.png" id="busca-test-image"/>
 				</a>
@@ -55,62 +55,35 @@
 					<img src="img/busca-preservativo.png" id="busca-preservativo-image"/>
 				</a>
             </div>
-			<div data-role="content" class="flex-container-nowrap">
-				<p class="flex-item-nowrap">Info start</p>
-				<p class="flex-item-nowrap">Info end</p>
+			<div data-role="content" class="flex-container-nowrap" data-theme="none">
+				<a href="http://huesped.org.ar" class="flex-item-nowrap" id="huesped-logo-link"><img src="img/logo-huesped.png" id="huesped-logo-image"/></a>
+				<div class="flex-item-nowrap" id="info-popup"><img src="img/info-icon-home.png" id="info-popup-image" /></div>
 			</div>
             <!-- /content -->
         </div>
-
-        <!-- TEST -->
-        <div data-role="page" id="test">
-            <!-- header -->
-            <div data-role="header">
-                <h1>fundacion huesped</h1>
-            </div>
-            <!-- /header -->
-            <div data-role="content">
-                <div class="">
-                    <h1>Tests</h1>
-                    <div id="deviceready" class="blink">
-                        <p class="event listening">Connecting to Device</p>
-                        <p class="event received">Device is Ready</p>
-                    </div>
-                </div>
-                <p>
-                    <a href="#test" data-role="button" data-theme="a" data-inline="true">Test</a>
-                    <a href="#forros" data-role="button" data-theme="b" data-inline="true">Forros</a>
-                </p>
-            </div><!-- /content -->
-            <div data-role="footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#tipos-page" data-icon="tipo" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
-                        <li><a href="#cerca-page" data-icon="cerca" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
-                        <li><a href="#comunas-page" data-icon="comuna" data-iconpos="top" class="sorted-by-comuna-btn">Comunas</a></li>
-                    </ul>
-                </div><!-- /navbar -->
-            </div><!-- /footer -->
-        </div>
-        <!-- /TEST -->
         
-        <div data-role="page" id="forros-menu">
-             <div data-role="content">
-               <div class="">
-                   <h1>Forros Menu</h1>
-               </div>
+        <div data-role="page" id="forros-menu" data-theme="none" class="preservativos-page">
+			<div data-role="header" data-position="fixed" data-theme="none">
+				<div class="header-button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</div>
+				<strong>PRESERVATIVOS</strong>
+			</div>
+            <div data-role="content">
                <p>
                    <a href="#forros-calle" data-role="button" data-theme="a" data-inline="true">Calle</a>
                    <a href="#forros-ciudad" data-role="button" data-theme="b" data-inline="true">Ciudad</a>
                    <a href="#forros-ubicame" data-role="button" data-theme="c" data-inline="true">Ubicame</a>
                </p>
-           </div><!-- /content -->
-            <div data-role="footer" data-position="fixed">
-                <div data-role="navbar">
+            </div><!-- /content -->
+            <div data-role="footer" data-position="fixed" data-theme="none">
+                <div>
                     <ul>
-                        <li><a href="#start" data-icon="tipo" data-iconpos="top" class="sorted-by-tipo-btn">Volver</a></li>
-                        <li><a href="#start" data-icon="cerca" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
-                        <li><a href="#info" data-icon="comuna" data-iconpos="top" class="sorted-by-comuna-btn">Info</a></li>
+                        <li><a href="#start">Volver</a></li>
+                        <li><a href="#start">Inicio</a></li>
+                        <li><a href="#info">Info</a></li>
                     </ul>
                 </div><!-- /navbar -->
             </div><!-- /footer -->

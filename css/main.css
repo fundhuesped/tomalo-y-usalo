@@ -100,4 +100,8 @@ strong {
 .ui-header {
 	color: white;
 	background-color: #00a4a7;
+	text-align: center;
+	font-size: 22pt;
+	padding-top: 15px;
+	padding-bottom: 8px;
 }

@@ -18,6 +18,8 @@
 	display: flex;
 	-webkit-flex-flow: column wrap;
 	flex-flow: column wrap;
+	-webkit-align-self: center;
+	align-self: center;
 }
 
 .flex-container .row > *, .flex-container-column-center > * {

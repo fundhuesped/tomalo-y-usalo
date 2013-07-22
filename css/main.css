@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Gotham Round";
+  src: url("GothamRnd-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gotham Round Bold";
+  src: url("GothamRnd-Bold.woff") format("woff");
+}
+
+html {
+	font-family: "Gotham Round", sansserif;
+}
+
+strong {
+	font-family: "Gotham Round Bold", sansserif;
+}
+
 .flex-container {
 	display: -webkit-box !important;
 	display: -moz-box !important;

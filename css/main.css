@@ -73,7 +73,9 @@ strong {
 }
 
 /** Estilos nuevos **/
-
+div.cartodb-popup h4 {
+    color: #fff;
+}
 .flex-container {
 	display: -webkit-box !important;
 	display: -moz-box !important;

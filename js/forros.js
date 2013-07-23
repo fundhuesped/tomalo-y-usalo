@@ -1,4 +1,4 @@
-function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
+function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipTplId) {
     var mapa = inicializarMapa(idContenedorMapa);
 
     //autocomplete del mapa
@@ -17,7 +17,7 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
         
         //tooltips
         var sublayer = layer.getSubLayer(0);
-        sublayer.infowindow.set('template', $('#infowindow_template').html());
+        sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
         sublayer.on('featureOver', function(e, pos, latlng, data) {
       });
 
@@ -32,7 +32,7 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
 };
 
 
- function mapa_ubicame(idContenedorMapa, cartodblayer) {
+ function mapa_ubicame(idContenedorMapa, cartodblayer,tooltipTplId) {
         var mapa = inicializarMapa(idContenedorMapa);
         
         //agrega layer de cartoDB
@@ -47,7 +47,7 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
            
             //tooltips
             var sublayer = layer.getSubLayer(0);
-            sublayer.infowindow.set('template', $('#infowindow_template').html());
+            sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
             sublayer.on('featureOver', function(e, pos, latlng, data) {
           });
 

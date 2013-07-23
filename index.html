@@ -194,7 +194,24 @@
             app.initialize();
         </script>
         <script type="infowindow/html" id="infowindow_template">
-            <div class="cartodb-popup" onclick="cerrar(this)" >
+            <div class="cartodb-popup" id="cartodb-tooltip" onclick="cerrar(this)" >
+
+               <div class="cartodb-popup-content-wrapper forros-tooltip-popup">
+                 <div class="cartodb-popup-content">
+                   <h3>{{content.data.establecimiento}}</h3>
+                   <!-- content.data contains the field info -->
+                   <h4> {{content.data.calle}} {{content.data.altura}}</h4>
+                   <h4> <strong>Horario:</strong> {{content.data.horario_atencion}}</h4>
+                   <h4> <strong>Teléfono:</strong> {{content.data.tel_estab}}</h4>
+                   <h4> <strong>Barrio:</strong> {{content.data.barrio_localidad}}</h4>
+                   <h4> {{content.data.provincia}}</h4>
+                 </div>
+               </div>
+               <div class="cartodb-popup-tip-container"></div>
+            </div>
+        </script>
+        <script type="infowindow/html" id="infowindow_template_forros">
+            <div class="cartodb-popup dark" id="cartodb-tooltip" onclick="cerrar(this)" >
 
                <div class="cartodb-popup-content-wrapper forros-tooltip-popup">
                  <div class="cartodb-popup-content">

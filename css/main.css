@@ -217,6 +217,21 @@ strong {
 	background-image: url('../img/info-icon-preservativo.png');
 }
 
+.tests-page {
+	background-color: white;
+}
+
+.tests-page .ui-header {
+	background-color: #E2001A;
+}
+
+.tests-page .ui-link, .tests-page .ui-content, .tests-page .ui-link:visited, .tests-page .ui-link:hover {
+	color: #E2001A;
+}
+
+.tests-page .info-button-footer {
+	background-image: url('../img/info-icon-test.png');
+}
 
 /** Pantalla de mapa de preservativo **/
 

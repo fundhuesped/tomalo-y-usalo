@@ -32,11 +32,11 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
 };
 
 
- function mapa_ubicame(idContenedorMapa) {
+ function mapa_ubicame(idContenedorMapa, cartodblayer) {
         var mapa = inicializarMapa(idContenedorMapa);
         
         //agrega layer de cartoDB
-        cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
+        cartodb.createLayer(mapa, cartodblayer)
         .addTo(mapa)
         .on('done', function(layer) {
           //agregamos el marcador con la ubicacion actual (geoposition = location de phonegap)

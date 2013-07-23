@@ -45,11 +45,11 @@ var app = {
         });
         
         $("#test-calle").on('pageshow', function(e){
-            mapa_porcalle('forros-map','geocomplete',tests);	
+            mapa_porcalle('test-calle-map','geocomplete',tests);	
         });
         
         $("#test-ubicame").on('pageshow', function(e){
-            mapa_ubicame('forros-map-ubicame',tests);	
+            mapa_ubicame('test-map-ubicame',tests);	
         });
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },

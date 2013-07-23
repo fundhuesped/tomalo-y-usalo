@@ -159,6 +159,12 @@ strong {
 	margin-top: 15px;
 }
 
+.ui-footer a:first-child, .ui-footer a:last-child {
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right:10px;
+}
+
 .back-button-footer {
 	background-image: url('../img/atras-icon.png');
 	width: 48px;

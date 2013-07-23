@@ -43,6 +43,11 @@ strong {
     font-family: "Gotham Round", sansserif;
 }
 
+.ui-content {
+	overflow-x: visible;
+	overflow-y: visible;
+}
+
 /** Estilos nuevos **/
 
 .flex-container {
@@ -124,6 +129,21 @@ strong {
 	margin-bottom: 8px;
 }
 
+/** Pantalla inicial Test y Preservativos **/
+.buscar-icon-link, .ubicame-icon-link {
+	min-height: 59px;
+	text-decoration: none;
+}
+
+.buscar-icon-link img, .ubicame-icon-link img {
+	vertical-align: middle;
+}
+
+.buscar-icon-link strong, .ubicame-icon-link strong {
+	vertical-align: -webkit-baseline-middle !important;
+	vertical-align: middle;
+}
+
 /** Pantalla inicial de preservativos **/
 
 .preservativos-page {
@@ -132,6 +152,10 @@ strong {
 
 .preservativos-page .ui-header {
 	background-color: #00a4a7;
+}
+
+.preservativos-page .ui-link, .preservativos-page .ui-content {
+	color: #00a4a7;
 }
 
 /* barras blancas del header */

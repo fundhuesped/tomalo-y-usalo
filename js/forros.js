@@ -85,7 +85,7 @@ function marcarpunto(geoposition, mapa, color, centrar) {
     
 }
 
-function inicializarMapa(idContenedor) {
+function inicializarMapa(idContenedorMapa) {
     // opciones del mapa
     var mapOptions = {
       zoom: 3,

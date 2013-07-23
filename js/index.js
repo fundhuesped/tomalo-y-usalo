@@ -33,13 +33,13 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         $("#forros-calle").on('pageshow', function(e){
-            main_forro();	
+            mapa_porcalle('forros-map','geocomplete');	
         });
         $("#forros-calle").on("pagehide", function(e) {
             //$('#map').gmap3('destroy');
         });
         $("#forros-ubicame").on('pageshow', function(e){
-            ubicame_forro();	
+            mapa_ubicame('forros-map-ubicame');	
         });
         
         document.addEventListener('deviceready', this.onDeviceReady, false);

@@ -1,44 +1,40 @@
-      function main_forro() {
-        var mapa = inicializarMapa('forros-map');
+function mapa_porcalle(idContenedorMapa, idAutocompleteInput) {
+    var mapa = inicializarMapa(idContenedorMapa);
 
-        //autocomplete del mapa
-        $("#geocomplete").geocomplete({
-            map: mapa,
-            country: 'ar'
-        }).bind("geocode:result", function(event, result){
-            $(".forros-map-menu").toggle();
-        });
-        $("#geocomplete").geocomplete("forros-map"); 
+    //autocomplete del mapa
+    $("#"+idAutocompleteInput).geocomplete({
+        map: mapa,
+        country: 'ar'
+    }).bind("geocode:result", function(event, result){
+        $(".forros-map-menu").toggle();
+    });
+    $("#"+idAutocompleteInput).geocomplete(idContenedorMapa); 
+
+    //agrega layer de cartoDB
+    cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
+    .addTo(mapa)
+    .on('done', function(layer) {   
         
-        //agrega layer de cartoDB
-        cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
-        .addTo(mapa)
-        .on('done', function(layer) {   
-          $(window).resize(function() {
-             $('#forros-map').width($(window).width());
-             $('#forros-map').height($(window).height());
-          });
-          //tooltips
-            var sublayer = layer.getSubLayer(0);
-            sublayer.infowindow.set('template', $('#infowindow_template').html());
-            sublayer.on('featureOver', function(e, pos, latlng, data) {
-          });
+        //tooltips
+        var sublayer = layer.getSubLayer(0);
+        sublayer.infowindow.set('template', $('#infowindow_template').html());
+        sublayer.on('featureOver', function(e, pos, latlng, data) {
+      });
 
-          sublayer.on('error', function(err) {
-              //si hay algun error en el tooltip
-          });
+      sublayer.on('error', function(err) {
+          //si hay algun error en el tooltip
+      });
 
-        })
-        .on('error', function(error) {
-           //si hay algun error con cartoDB
-        });
-      };
+    })
+    .on('error', function(error) {
+       //si hay algun error con cartoDB
+    });
+};
 
 
- function ubicame_forro() {
-        var mapa = inicializarMapa('forros-map-ubicame');
-     
-     
+ function mapa_ubicame(idContenedorMapa) {
+        var mapa = inicializarMapa(idContenedorMapa);
+        
         //agrega layer de cartoDB
         cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
         .addTo(mapa)
@@ -48,10 +44,7 @@
                 marcarpunto(geoposition,mapa,'#a2001e', true);
           });
   
-          $(window).resize(function() {
-             $('#forros-map-ubicame').width($(window).width());
-             $('#forros-map-ubicame').height($(window).height());
-          });
+           
             //tooltips
             var sublayer = layer.getSubLayer(0);
             sublayer.infowindow.set('template', $('#infowindow_template').html());
@@ -81,7 +74,6 @@ function marcarpunto(geoposition, mapa, color, centrar) {
         map: mapa,
         radius: 500,    // 10 miles in metres
         fillColor: color,//'#a2001e',
-        
         strokeWeight: 0 
       });
     circle.bindTo('center', marcador, 'position');
@@ -92,7 +84,7 @@ function marcarpunto(geoposition, mapa, color, centrar) {
     
 }
 
-function inicializarMapa(idContenedor) {
+function inicializarMapa(idContenedorMapa) {
     // opciones del mapa
     var mapOptions = {
       zoom: 3,
@@ -100,12 +92,21 @@ function inicializarMapa(idContenedor) {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     //inicializa mapa
-    var mapa = new google.maps.Map(document.getElementById(idContenedor), mapOptions);
+    var mapa = new google.maps.Map(document.getElementById(idContenedorMapa), mapOptions);
     
     //tamaño del mapa (al 100% no funciona en mobile)
-    $('#'+idContenedor).width($(window).width());
-    $('#'+idContenedor).height(($(window).height()-$('.ui-navbar').height()));  
-    google.maps.event.trigger(mapa, 'resize'); 
-
+    actualizarTamanioMapa(idContenedorMapa, mapa);
+    $(window).resize(function() {
+       actualizarTamanioMapa(idContenedorMapa, mapa);
+    });
     return mapa
 } 
+
+function actualizarTamanioMapa(idContenedorMapa, mapa) {
+    $('#'+idContenedorMapa).width($(window).width());
+    $('#'+idContenedorMapa).height(($(window).height()-$('.ui-navbar').height()));  
+    google.maps.event.trigger(mapa, 'resize'); 
+}
+function cerrar (elem) {
+    $(elem).remove();
+}

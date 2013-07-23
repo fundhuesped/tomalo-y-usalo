@@ -109,7 +109,7 @@ function inicializarMapa(idContenedorMapa) {
 
 function actualizarTamanioMapa(idContenedorMapa, mapa) {
     $('#'+idContenedorMapa).width($(window).width());
-    $('#'+idContenedorMapa).height(($(window).height()-$('.ui-navbar').height()));  
+    $('#'+idContenedorMapa).height($(window).height()-$('.ui-header').outerHeight(true) - $('.ui-footer').outerHeight(true));  
     google.maps.event.trigger(mapa, 'resize'); 
 }
 function cerrar (elem) {

@@ -301,6 +301,12 @@ div.cartodb-popup h4 {
     margin-top: -10px;
 }
 
+.forros-map {
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .pac-container {
     margin-top: 1%;
     margin-left: 0;

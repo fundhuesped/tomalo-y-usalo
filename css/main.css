@@ -286,14 +286,14 @@ strong {
 	background-color: #00a4a7;
 }
 
-#forros-calle .ui-input-text {
+#forros-calle .ui-input-text,#test-calle .ui-input-text {
     /* padding: 10px; */
     margin: 10px;
 }
 #forros-calle #geocomplete {
     border-radius: 0;
 }
-#forros-calle a.ui-input-clear {
+#forros-calle a.ui-input-clear,#test-calle a.ui-input-clear{
     //display: none;
     margin-right: 10px;
     margin-top: -10px;

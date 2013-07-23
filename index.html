@@ -119,13 +119,38 @@
                 </div><!-- /navbar -->
             </div><!-- /footer -->
         </div>
+        
+        <!-- ubicame -->
+        <div data-role="page" id="forros-ubicame" class="preservativos-page">
+            <div data-role="header" data-position="fixed" data-theme="none">
+                <div class="header-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <strong>PRESERVATIVOS</strong>
+            </div><!-- /header -->
+            <div data-role="content" class="nomargin" >
+                
+                <div id="forros-map-ubicame" class="forros-map" style="width: 100%; height: 100%;" ></div>
+            </div><!-- /content -->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#forros-menu" data-icon="tipo" data-iconpos="top" class="sorted-by-tipo-btn">Volver</a></li>
+                        <li><a href="#start" data-icon="cerca" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
+                        <li><a href="#info" data-icon="comuna" data-iconpos="top" class="sorted-by-comuna-btn">Info</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div>
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script>
             app.initialize();
         </script>
         <script type="infowindow/html" id="infowindow_template">
-            
             <div class="cartodb-popup">
               <a href="#close" class="cartodb-popup-close-button close">x</a>
 

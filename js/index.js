@@ -36,8 +36,12 @@ var app = {
             main_forro();	
         });
         $("#forros-calle").on("pagehide", function(e) {
-            $('#map').gmap3('destroy');
+            //$('#map').gmap3('destroy');
         });
+        $("#forros-ubicame").on('pageshow', function(e){
+            ubicame_forro();	
+        });
+        
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler

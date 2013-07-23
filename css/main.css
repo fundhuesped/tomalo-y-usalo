@@ -142,6 +142,12 @@ strong {
 .buscar-icon-link strong, .ubicame-icon-link strong {
 	vertical-align: -webkit-baseline-middle !important;
 	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.ui-content .titulo {
+	margin-bottom: 25px;
+	margin-top: 15px;
 }
 
 /** Pantalla inicial de preservativos **/

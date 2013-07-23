@@ -35,23 +35,33 @@ var app = {
         var tests = "http://fundhuesped.cartodb.com/api/v2/viz/d411feb8-f3c1-11e2-a45e-ddabda956258/viz.json";
         var buscar_forros = "http://fundhuesped.cartodb.com/api/v2/viz/9d28261a-f3c2-11e2-b703-417053fa0b43/viz.json";
         $("#forros-calle").on('pageshow', function(e){
+            $(".forros-autocomplete-menu").show();
+            $("#forros-map").html("");
             mapa_porcalle('forros-map','forros-autocomplete',buscar_forros,"infowindow_template_forros");	
         });
         $("#forros-calle").on("pagehide", function(e) {
-            //$('#map').gmap3('destroy');
+            $("#forros-map").html("");
         });
         $("#forros-ubicame").on('pageshow', function(e){
             mapa_ubicame('forros-map-ubicame',buscar_forros,"infowindow_template_forros");	
         });
-        
+         $("#forros-ubicame").on("pagehide", function(e) {
+            $("#forros-map-ubicame").html("");
+        });
         $("#test-calle").on('pageshow', function(e){
+            $(".test-autocomplete-menu").show();
             mapa_porcalle('test-calle-map','test-autocomplete',tests,"infowindow_template");	
         });
-        
+         $("#test-calle").on("pagehide", function(e) {
+            $("#test-calle-map").html("");
+        });
         $("#test-ubicame").on('pageshow', function(e){
             mapa_ubicame('test-map-ubicame',tests,"infowindow_template");	
         });
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+         $("#test-ubicame").on("pagehide", function(e) {
+            $("#test-map-ubicame").html("");
+        });
+        //document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //

@@ -111,3 +111,19 @@ function actualizarTamanioMapa(idContenedorMapa, mapa) {
 function cerrar (elem) {
     $(elem).remove();
 }
+
+
+var DB = {
+    init: function() {
+        //10000000 = 10Mbytes (si kilo = 1000)
+       var db = window.openDatabase("tomalo_usalo", "1.0", "Tomalo y Usalo", 10000000);
+       db.transaction(this.syncronize, errorCB, successCB);
+         
+
+    },
+    syncronize: function(cnx) {
+        cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_test (id unique, data, time)');
+        cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_forros (id unique, data, time)');
+       
+    },
+};

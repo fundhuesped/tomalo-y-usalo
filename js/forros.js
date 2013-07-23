@@ -74,6 +74,7 @@ function marcarpunto(geoposition, mapa, color, centrar) {
         map: mapa,
         radius: 500,    // 10 miles in metres
         fillColor: color,//'#a2001e',
+        
         strokeWeight: 0 
       });
     circle.bindTo('center', marcador, 'position');
@@ -84,7 +85,7 @@ function marcarpunto(geoposition, mapa, color, centrar) {
     
 }
 
-function inicializarMapa(idContenedorMapa) {
+function inicializarMapa(idContenedor) {
     // opciones del mapa
     var mapOptions = {
       zoom: 3,

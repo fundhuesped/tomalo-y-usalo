@@ -46,6 +46,12 @@ strong {
 .ui-content {
 	overflow-x: visible;
 	overflow-y: visible;
+	background-color: white;
+}
+
+.ui-page {
+	background-color: white;
+	background-image: none;
 }
 
 .ui-footer .ui-btn {
@@ -248,6 +254,10 @@ strong {
 
 /** Pantalla de mapa de preservativo **/
 
+.header-button {
+	cursor: pointer;
+}
+
 .nomargin {
     margin: 0px;
     padding: 0px;
@@ -255,7 +265,7 @@ strong {
 
 .forros-map-menu {
     position: absolute;
-    z-index: 1000;
+    z-index: 1;
     width: 80%;
     height: 100%;
     background-color: #e2001a;

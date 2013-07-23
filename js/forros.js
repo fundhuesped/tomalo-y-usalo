@@ -100,6 +100,10 @@ function inicializarMapa(idContenedorMapa) {
     $(window).resize(function() {
        actualizarTamanioMapa(idContenedorMapa, mapa);
     });
+    
+    $('#'+idContenedorMapa).parents(".ui-page").find(".header-button").on('click', function() {
+		$('#'+idContenedorMapa).parents(".ui-content").children(".forros-autocomplete-menu").toggle();
+	});
     return mapa
 } 
 

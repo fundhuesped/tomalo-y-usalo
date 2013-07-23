@@ -6,7 +6,7 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
         map: mapa,
         country: 'ar'
     }).bind("geocode:result", function(event, result){
-        $(".forros-map-menu").toggle();
+        $("."+idAutocompleteInput+"-menu").toggle();
     });
     $("#"+idAutocompleteInput).geocomplete(idContenedorMapa); 
 

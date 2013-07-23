@@ -263,14 +263,14 @@ strong {
     padding: 0px;
 }
 
-.forros-map-menu {
+.forros-autocomplete-menu, .test-autocomplete-menu {
     position: absolute;
     z-index: 1;
     width: 80%;
     height: 100%;
 }
 
-.forros-map-menu .ui-btn-corner-all {
+.forros-autocomplete-menu .ui-btn-corner-all, .test-autocomplete-menu .ui-btn-corner-all {
     -webkit-border-radius: 0;
     border-radius: 0;
     margin-left: 10px;
@@ -278,7 +278,11 @@ strong {
      margin: 10px;
 }
 
-.preservativos-page .forros-map-menu {
+.test-autocomplete-menu {
+	background-color: #e2001a;
+}
+
+.preservativos-page .forros-autocomplete-menu {
 	background-color: #00a4a7;
 }
 

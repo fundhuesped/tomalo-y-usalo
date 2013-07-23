@@ -46,6 +46,12 @@ strong {
 .ui-content {
 	overflow-x: visible;
 	overflow-y: visible;
+	background-color: white;
+}
+
+.ui-page {
+	background-color: white;
+	background-image: none;
 }
 
 .ui-footer .ui-btn {
@@ -247,6 +253,10 @@ strong {
 }
 
 /** Pantalla de mapa de preservativo **/
+
+.header-button {
+	cursor: pointer;
+}
 
 .nomargin {
     margin: 0px;

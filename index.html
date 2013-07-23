@@ -48,10 +48,10 @@
             <!-- content -->
             <div data-role="content" data-theme="none">&nbsp;</div>
             <div data-role="content" class="flex-container-column-center" data-theme="none">
-				<a href="#forros-menu" id="busca-test-main-link">
+				<a href="#test-menu" id="busca-test-main-link">
 					<img src="img/busca-test.png" id="busca-test-image"/>
 				</a>
-				<a href="#test-menu" id="busca-preservativo-main-link">
+				<a href="#forros-menu" id="busca-preservativo-main-link">
 					<img src="img/busca-preservativo.png" id="busca-preservativo-image"/>
 				</a>
             </div>
@@ -64,11 +64,6 @@
         
         <div data-role="page" id="forros-menu" data-theme="none" class="preservativos-page">
 			<div data-role="header" data-position="fixed" data-theme="none">
-				<div class="header-button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</div>
 				<strong>PRESERVATIVOS</strong>
 			</div><!-- /header -->
             <div data-role="content" data-theme="none" class="flex-container-column-center">
@@ -83,32 +78,31 @@
             </div><!-- /footer -->
         </div>
         
-        <div data-role="page" id="test-menu">
-             <div data-role="content">
-               <div class="">
-                   <h1>Test Menu</h1>
-               </div>
-               <p>
-                   <a href="#calle" data-role="button" data-theme="a" data-inline="true">Calle</a>
-                   <a href="#ciudad" data-role="button" data-theme="b" data-inline="true">Ciudad</a>
-                   <a href="#ubicame" data-role="button" data-theme="c" data-inline="true">Ubicame</a>
-               </p>
-           </div><!-- /content -->
-            <div data-role="footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#start" data-icon="tipo" data-iconpos="top" class="sorted-by-tipo-btn">Volver</a></li>
-                        <li><a href="#start" data-icon="cerca" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
-                        <li><a href="#info" data-icon="comuna" data-iconpos="top" class="sorted-by-comuna-btn">Info</a></li>
-                    </ul>
-                </div><!-- /navbar -->
+        <div data-role="page" id="test-menu" class="tests-page">
+			<div data-role="header" data-position="fixed" data-theme="none">
+				<strong>TEST DE VIH</strong>
+			</div><!-- /header -->
+			<div data-role="content" data-theme="none" class="flex-container-column-center">
+				<div class="titulo"><strong>¿DÓNDE ESTÁS?</strong></div>
+				<a href="#forros-calle" data-theme="none" class="buscar-icon-link"><img src="../img/busca-icon-test.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a>
+				<a href="#forros-ubicame" data-theme="none" class="ubicame-icon-link"><img src="../img/ubicame-icon-test.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a>
+            </div><!-- /content -->
+            <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap">
+				<a href="#start" class="back-button-footer" data-theme="none"></a></li>
+				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
+				<a href="#info" class="info-button-footer" data-theme="none"></a></li>
             </div><!-- /footer -->
         </div>
         
-        <div data-role="page" id="forros-calle">
-           <div data-role="header">
-               <h1>fundacion huesped</h1>
-           </div><!-- /header -->
+        <div data-role="page" id="forros-calle" class="preservativos-page">
+			<div data-role="header" data-position="fixed" data-theme="none">
+				<div class="header-button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</div>
+				<strong>PRESERVATIVOS</strong>
+			</div><!-- /header -->
            <div data-role="content" class="nomargin" >
                <div class="forros-map-menu">
                    <input type="search" name="search-mini" id="geocomplete" value="" data-mini="true" />

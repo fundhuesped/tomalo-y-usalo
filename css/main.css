@@ -182,6 +182,23 @@ strong {
 	height: 48px;
 }
 
+/* barras blancas del header */
+.ui-header .icon-bar {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background-color: white;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: 4px;
+	color: #ffffff;
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 0x 0px rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 0px 0px rgb(255, 255, 255);
+	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
+}
+
 /** Pantalla inicial de preservativos **/
 
 .preservativos-page {
@@ -200,21 +217,20 @@ strong {
 	background-image: url('../img/info-icon-preservativo.png');
 }
 
-/* barras blancas del header */
-.ui-header .icon-bar {
-	display: block;
-	width: 30px;
-	height: 4px;
+.tests-page {
 	background-color: white;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	margin-top: 4px;
-	color: #ffffff;
-	cursor: pointer;
-	-webkit-box-shadow: 0 0 0x 0px rgb(255, 255, 255);
-	-moz-box-shadow: 0 0 0px 0px rgb(255, 255, 255);
-	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
+}
+
+.tests-page .ui-header {
+	background-color: #E2001A;
+}
+
+.tests-page .ui-link, .tests-page .ui-content, .tests-page .ui-link:visited, .tests-page .ui-link:hover {
+	color: #E2001A;
+}
+
+.tests-page .info-button-footer {
+	background-image: url('../img/info-icon-test.png');
 }
 
 /** Pantalla de mapa de preservativo **/

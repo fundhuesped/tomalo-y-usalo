@@ -1,4 +1,5 @@
-function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
+<<<<<<< HEAD
+function mapa_porcalle(idContenedorMapa, idAutocompleteInput) {
     var mapa = inicializarMapa(idContenedorMapa);
 
     //autocomplete del mapa
@@ -11,9 +12,26 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer) {
     $("#"+idAutocompleteInput).geocomplete(idContenedorMapa); 
 
     //agrega layer de cartoDB
-    cartodb.createLayer(mapa,cartodblayer )
+    cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
     .addTo(mapa)
     .on('done', function(layer) {   
+=======
+      function main_forro() {
+
+        var mapa = inicializarMapa('forros-map');
+        $('#preservativos-search-panel-button').on('click', function() {
+			$(".forros-map-menu").toggle();
+		});
+
+        //autocomplete del mapa
+        $("#geocomplete").geocomplete({
+            map: mapa,
+            country: 'ar'
+        }).bind("geocode:result", function(event, result){
+            $(".forros-map-menu").toggle();            
+        });
+        $("#geocomplete").geocomplete("forros-map"); 
+>>>>>>> 1792ea67830b3420b3c12c67435352d050c49b3a
         
         //tooltips
         var sublayer = layer.getSubLayer(0);
@@ -74,7 +92,6 @@ function marcarpunto(geoposition, mapa, color, centrar) {
         map: mapa,
         radius: 500,    // 10 miles in metres
         fillColor: color,//'#a2001e',
-        
         strokeWeight: 0 
       });
     circle.bindTo('center', marcador, 'position');
@@ -102,6 +119,7 @@ function inicializarMapa(idContenedorMapa) {
     });
     return mapa
 } 
+<<<<<<< HEAD
 
 function actualizarTamanioMapa(idContenedorMapa, mapa) {
     $('#'+idContenedorMapa).width($(window).width());
@@ -111,3 +129,5 @@ function actualizarTamanioMapa(idContenedorMapa, mapa) {
 function cerrar (elem) {
     $(elem).remove();
 }
+=======
+>>>>>>> 1792ea67830b3420b3c12c67435352d050c49b3a

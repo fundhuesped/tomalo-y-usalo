@@ -48,6 +48,15 @@ strong {
 	overflow-y: visible;
 }
 
+.ui-footer .ui-btn {
+	-moz-box-shadow: 0 0px 0px /*{global-box-shadow-size}*/ rgba(255,255,255,0) /*{global-box-shadow-color}*/;
+	-webkit-box-shadow: 0 0px 0px /*{global-box-shadow-size}*/;
+	-webkit-background-clip: inital;
+	background-clip: initial;
+	-webkit-border-radius: 0 /*{global-radii-buttons}*/;
+	border-radius: 0 /*{global-radii-buttons}*/;
+}
+
 /** Estilos nuevos **/
 
 .flex-container {

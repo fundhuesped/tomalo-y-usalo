@@ -159,6 +159,23 @@ strong {
 	margin-top: 15px;
 }
 
+.back-button-footer {
+	background-image: url('../img/atras-icon.png');
+	width: 48px;
+	height: 48px;
+}
+
+.home-button-footer {
+	background-image: url('../img/ir-a-home-icon.png');
+	width: 48px;
+	height: 48px;
+}
+
+.info-button-footer {
+	width: 48px;
+	height: 48px;
+}
+
 /** Pantalla inicial de preservativos **/
 
 .preservativos-page {
@@ -171,6 +188,10 @@ strong {
 
 .preservativos-page .ui-link, .preservativos-page .ui-content {
 	color: #00a4a7;
+}
+
+.preservativos-page .info-button-footer {
+	background-image: url('../img/info-icon-preservativo.png');
 }
 
 /* barras blancas del header */

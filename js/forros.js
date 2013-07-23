@@ -14,7 +14,7 @@
         //geocoder
         
         $('#forros-map').width($(window).width());
-        $('#forros-map').height($(window).height());
+        $('#forros-map').height(($(window).height()-$('.ui-navbar').height()));
           
     google.maps.event.trigger(mapa, 'resize'); 
         

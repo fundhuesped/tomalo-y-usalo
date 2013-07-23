@@ -113,18 +113,63 @@ function cerrar (elem) {
     $(elem).remove();
 }
 
-
-var DB = {
+var dab;
+var DBStorage = {
+    db: {},
     init: function() {
         //10000000 = 10Mbytes (si kilo = 1000)
-       var db = window.openDatabase("tomalo_usalo", "1.0", "Tomalo y Usalo", 10000000);
-       db.transaction(this.syncronize, errorCB, successCB);
-         
-
+       this.db = this.getDBObject();
+       this.db.transaction(this.createTables,this.error, this.successInit);
+       this.db.transaction(this.getAllTestPoints,this.error, this.success);
+    },
+    getDBObject: function() {
+        return window.openDatabase("tomalo_usalo", "1.0", "Tomalo y Usalo", 10000000);
+    },
+    checkSync: function() {
+        this.db.transaction(this.getAllTestPoints,this.syncTests, this.success);
+    },
+    successInit: function() {
+        console.log("init ok");
+        
+    },
+    createTables: function(cnx){
+        console.log("crea tablas");
+        //cnx.executeSql('DROP TABLE IF EXISTS TESTS');
+        cnx.executeSql('CREATE TABLE IF NOT EXISTS TESTS (id unique, data, fecha)');
+        cnx.executeSql('INSERT INTO TESTS (id unique, data, time) VALUES (1, "First row", "asasf")');
+        console.log("fin crea tablas");
     },
     syncronize: function(cnx) {
-        cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_test (id unique, data, time)');
-        cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_forros (id unique, data, time)');
-       
+        console.log("tomamos puntos test");
+        this.db.transaction(this.getAllTestPoints,this.error, this.success);
+        //cnx.executeSql('INSERT INTO carto_test (id, data, time) VALUES (1, "First row", "asasf")');
+        //cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_forros (id unique, data, time)');
+        //this.db.transaction(this.getAllTestPoints, this.errorCNX, this.successCB);
+        console.log("fin tomamos puntos test");
     },
+    getAllTestPoints: function(cnx) {
+        cnx.executeSql('SELECT * FROM TESTS', [], this.syncTest, this.error);
+    },
+    getAllForrosPoints: function(cnx) {
+        cnx.executeSql('SELECT * FROM carto_forros', [], this.syncForros, this.error);
+    },
+    error: function(err) {
+        console.log("Error processing SQL: "+err.code);
+    },
+
+    success: function() {
+        
+    },
+
+    syncTest: function (cnx, results) {
+        alert("test");
+        alert(results.rows.length);
+      
+    },
+    syncForros: function (cnx, results) {
+        alert("forros");
+        alert(results.rows.length);
+      
+    },
+
 };

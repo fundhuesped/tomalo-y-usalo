@@ -268,7 +268,6 @@ strong {
     z-index: 1;
     width: 80%;
     height: 100%;
-    background-color: #e2001a;
 }
 
 .forros-map-menu .ui-btn-corner-all {
@@ -277,6 +276,10 @@ strong {
     margin-left: 10px;
     margin-top: 10px;
      margin: 10px;
+}
+
+.preservativos-page .forros-map-menu {
+	background-color: #00a4a7;
 }
 
 #forros-calle .ui-input-text {

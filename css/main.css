@@ -8,16 +8,22 @@
   src: url("GothamRnd-Bold.woff") format("woff");
 }
 
-/** jQuery Mobile modif **/
+/** Modificación jQuery Mobile General **/
+
+html {
+	font-family: "Gotham Round", sansserif;
+}
+
+strong {
+	font-family: "Gotham Round Bold", sansserif;
+}
 
 .ui-btn-up-c {
     border: none;
 }
 
-
 .ui-header {
 	color: white;
-	background-color: #00a4a7;
 	text-align: center;
 	font-size: 20pt;
 	padding-top: 15px;
@@ -37,15 +43,7 @@
     font-family: "Gotham Round", sansserif;
 }
 
-/** Css Tomalo y Usalo **/
-
-html {
-	font-family: "Gotham Round", sansserif;
-}
-
-strong {
-	font-family: "Gotham Round Bold", sansserif;
-}
+/** Estilos nuevos **/
 
 .flex-container {
 	display: -webkit-box !important;
@@ -112,6 +110,8 @@ strong {
 	text-align: right;
 }
 
+/** Pantalla inicial **/
+
 #busca-test-main-link, #busca-preservativo-main-link {
 	min-width: 133px;
 	min-height: 133px;
@@ -124,8 +124,14 @@ strong {
 	margin-bottom: 8px;
 }
 
+/** Pantalla inicial de preservativos **/
+
 .preservativos-page {
 	background-color: white;
+}
+
+.preservativos-page .ui-header {
+	background-color: #00a4a7;
 }
 
 /* barras blancas del header */
@@ -145,7 +151,7 @@ strong {
 	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
 }
 
-/** Preservativos map page style **/
+/** Pantalla de mapa de preservativo **/
 
 .nomargin {
     margin: 0px;

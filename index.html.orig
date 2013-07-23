@@ -79,6 +79,21 @@
         </div>
         
         <div data-role="page" id="test-menu" class="tests-page">
+<<<<<<< HEAD
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-theme="none">
+                <strong>TEST DE VIH</strong>
+            </div><!-- /header -->
+            <div data-role="content" data-theme="none" class="flex-container-column-center">
+                <div class="titulo"><strong>¿DÓNDE ESTÁS?</strong></div>
+                <a href="#test-calle" data-theme="none" class="buscar-icon-link"><img src="../img/busca-icon-test.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a>
+                <a href="#test-ubicame" data-theme="none" class="ubicame-icon-link"><img src="../img/ubicame-icon-test.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a>
+            </div><!-- /content -->
+            <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap">
+                <a href="#start" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
+                <a href="#start" class="home-button-footer" data-theme="none"></a></li>
+                <a href="#info" class="info-button-footer" data-theme="none"></a></li>
+=======
 			<div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
 				<strong>TEST DE VIH</strong>
 			</div><!-- /header -->
@@ -87,14 +102,25 @@
 				<a href="#test-calle" data-theme="none" class="buscar-icon-link"><img src="../img/busca-icon-test.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a>
 				<a href="#test-ubicame" data-theme="none" class="ubicame-icon-link"><img src="../img/ubicame-icon-test.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a>
             </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap">
+            <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap" data-tap-toggle="false">
 				<a href="#start" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
 				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
 				<a href="#info" class="info-button-footer" data-theme="none"></a></li>
+>>>>>>> eeae3606c11b42edaa7c130d84f5531ec315d167
             </div><!-- /footer -->
         </div>
         
         <div data-role="page" id="forros-calle" class="preservativos-page">
+<<<<<<< HEAD
+            <div data-role="header" data-tap-toggle="false" data-position="fixed" data-theme="none">
+                    <div class="header-button" id="preservativos-search-panel-button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </div>
+                    <strong>PRESERVATIVOS</strong>
+            </div><!-- /header -->
+=======
 			<div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
 				<div class="header-button" id="preservativos-search-panel-button">
 					<span class="icon-bar"></span>
@@ -103,13 +129,18 @@
 				</div>
 				<strong>PRESERVATIVOS</strong>
 			</div><!-- /header -->
+>>>>>>> eeae3606c11b42edaa7c130d84f5531ec315d167
            <div data-role="content" class="nomargin" >
                <div class="forros-autocomplete-menu">
                    <input type="search" name="search-mini" id="forros-autocomplete" value="" data-mini="true" />
                </div>
-               <div id="forros-map" class="forros-map" style="width: 100%; height: 100%;" ></div>
+               <div id="forros-map" class="forros-map" data-role="content" style="width: 100%; height: 100%;" ></div>
            </div><!-- /content -->
+<<<<<<< HEAD
+            <div data-role="footer" data-tap-toggle="false" data-position="fixed" data-theme="none" class="footer-nav flex-container-nowrap">
+=======
             <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap" data-tap-toggle="false">
+>>>>>>> eeae3606c11b42edaa7c130d84f5531ec315d167
 				<a href="#forros-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
 				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
 				<a href="#info" class="info-button-footer" data-theme="none"></a></li>
@@ -118,6 +149,15 @@
         
         
          <div data-role="page" id="test-calle" class="tests-page" >
+<<<<<<< HEAD
+            <div data-role="header" data-tap-toggle="false" data-position="fixed" data-theme="none">
+                <div class="header-button" id="preservativos-search-panel-button">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </div>
+                <strong>TEST DE VIH</strong>
+=======
             <div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
                     <div class="header-button" id="preservativos-search-panel-button">
                             <span class="icon-bar"></span>
@@ -125,6 +165,7 @@
                             <span class="icon-bar"></span>
                     </div>
                     <strong>TEST DE VIH</strong>
+>>>>>>> eeae3606c11b42edaa7c130d84f5531ec315d167
             </div><!-- /header -->
            <div data-role="content" class="nomargin" >
                <div class="test-autocomplete-menu">
@@ -132,15 +173,20 @@
                </div>
                <div id="test-calle-map" class="test-calle-map" style="width: 100%; height: 100%;" ></div>
            </div><!-- /content -->
+<<<<<<< HEAD
+            <div data-role="footer" data-tap-toggle="false" data-position="fixed" data-theme="none" class="footer-nav flex-container-nowrap">
+                                    <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
+=======
             <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap" data-tap-toggle="false">
                 <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
+>>>>>>> eeae3606c11b42edaa7c130d84f5531ec315d167
 				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
 				<a href="#info" class="info-button-footer" data-theme="none"></a></li>
             </div><!-- /footer -->
         </div>
         
         <div data-role="page" id="test-ubicame" class="tests-page">
-            <div data-role="header" data-position="fixed" data-theme="none">
+            <div data-role="header" data-tap-toggle="false" data-position="fixed" data-theme="none">
                 <div class="header-button">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -152,7 +198,7 @@
                 
                 <div id="test-map-ubicame" class="forros-map" style="width: 100%; height: 100%;" ></div>
             </div><!-- /content -->
-             <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap">
+             <div data-role="footer" data-position="fixed" data-theme="none" class="footer-nav flex-container-nowrap" data-tap-toggle="false">
                         <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
                     <a href="#start" class="home-button-footer" data-theme="none"></a></li>
                     <a href="#info" class="info-button-footer" data-theme="none"></a></li>
@@ -161,7 +207,7 @@
         
         <!-- ubicame -->
         <div data-role="page" id="forros-ubicame" class="preservativos-page">
-            <div data-role="header" data-position="fixed" data-theme="none">
+            <div data-role="header" data-tap-toggle="false" data-position="fixed" data-theme="none">
                 <div class="header-button">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -171,9 +217,9 @@
             </div><!-- /header -->
             <div data-role="content" class="nomargin" >
                 
-                <div id="forros-map-ubicame" class="forros-map" style="width: 100%; height: 100%;" ></div>
+                <div id="forros-map-ubicame"  class="forros-map" style="width: 100%; height: 100%;" ></div>
             </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none" class="flex-container-nowrap">
+            <div data-role="footer" data-tap-toggle="false" data-position="fixed" data-theme="none" class="footer-nav flex-container-nowrap">
                <a href="#forros-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
                <a href="#start" class="home-button-footer" data-theme="none"></a></li>
                <a href="#info" class="info-button-footer" data-theme="none"></a></li>

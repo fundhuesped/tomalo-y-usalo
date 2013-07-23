@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-function mapa_porcalle(idContenedorMapa, idAutocompleteInput) {
+function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipTplId) {
     var mapa = inicializarMapa(idContenedorMapa);
 
     //autocomplete del mapa
@@ -7,35 +6,18 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput) {
         map: mapa,
         country: 'ar'
     }).bind("geocode:result", function(event, result){
-        $(".forros-map-menu").toggle();
+        $("."+idAutocompleteInput+"-menu").toggle();
     });
     $("#"+idAutocompleteInput).geocomplete(idContenedorMapa); 
 
     //agrega layer de cartoDB
-    cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
+    cartodb.createLayer(mapa,cartodblayer )
     .addTo(mapa)
     .on('done', function(layer) {   
-=======
-      function main_forro() {
-
-        var mapa = inicializarMapa('forros-map');
-        $('#preservativos-search-panel-button').on('click', function() {
-			$(".forros-map-menu").toggle();
-		});
-
-        //autocomplete del mapa
-        $("#geocomplete").geocomplete({
-            map: mapa,
-            country: 'ar'
-        }).bind("geocode:result", function(event, result){
-            $(".forros-map-menu").toggle();            
-        });
-        $("#geocomplete").geocomplete("forros-map"); 
->>>>>>> 1792ea67830b3420b3c12c67435352d050c49b3a
         
         //tooltips
         var sublayer = layer.getSubLayer(0);
-        sublayer.infowindow.set('template', $('#infowindow_template').html());
+        sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
         sublayer.on('featureOver', function(e, pos, latlng, data) {
       });
 
@@ -50,11 +32,11 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput) {
 };
 
 
- function mapa_ubicame(idContenedorMapa) {
+ function mapa_ubicame(idContenedorMapa, cartodblayer,tooltipTplId) {
         var mapa = inicializarMapa(idContenedorMapa);
         
         //agrega layer de cartoDB
-        cartodb.createLayer(mapa, 'http://fundhuesped.cartodb.com/api/v2/viz/6e2ce16a-f2ec-11e2-a228-699358bddf8e/viz.json')
+        cartodb.createLayer(mapa, cartodblayer)
         .addTo(mapa)
         .on('done', function(layer) {
           //agregamos el marcador con la ubicacion actual (geoposition = location de phonegap)
@@ -65,7 +47,7 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput) {
            
             //tooltips
             var sublayer = layer.getSubLayer(0);
-            sublayer.infowindow.set('template', $('#infowindow_template').html());
+            sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
             sublayer.on('featureOver', function(e, pos, latlng, data) {
           });
 
@@ -92,6 +74,7 @@ function marcarpunto(geoposition, mapa, color, centrar) {
         map: mapa,
         radius: 500,    // 10 miles in metres
         fillColor: color,//'#a2001e',
+        
         strokeWeight: 0 
       });
     circle.bindTo('center', marcador, 'position');
@@ -117,17 +100,38 @@ function inicializarMapa(idContenedorMapa) {
     $(window).resize(function() {
        actualizarTamanioMapa(idContenedorMapa, mapa);
     });
+    
+    $('#'+idContenedorMapa).parents(".ui-page").find(".header-button").on('click', function() {
+		$('#'+idContenedorMapa).parents(".ui-content").children(".forros-autocomplete-menu").toggle();
+	});
     return mapa
 } 
-<<<<<<< HEAD
 
 function actualizarTamanioMapa(idContenedorMapa, mapa) {
-    $('#'+idContenedorMapa).width($(window).width());
-    $('#'+idContenedorMapa).height(($(window).height()-$('.ui-navbar').height()));  
+	var domMapa = $("#"+idContenedorMapa);
+    domMapa.width($(window).width());
+    domMapa.height($(window).height() - domMapa.parents(".ui-page").children('.ui-header').outerHeight(true) - domMapa.parents(".ui-page").children('.ui-footer').outerHeight(true));  
     google.maps.event.trigger(mapa, 'resize'); 
 }
 function cerrar (elem) {
     $(elem).remove();
 }
+<<<<<<< HEAD
+
+
+var DB = {
+    init: function() {
+        //10000000 = 10Mbytes (si kilo = 1000)
+       var db = window.openDatabase("tomalo_usalo", "1.0", "Tomalo y Usalo", 10000000);
+       db.transaction(this.syncronize, errorCB, successCB);
+         
+
+    },
+    syncronize: function(cnx) {
+        cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_test (id unique, data, time)');
+        cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_forros (id unique, data, time)');
+       
+    },
+};
 =======
->>>>>>> 1792ea67830b3420b3c12c67435352d050c49b3a
+>>>>>>> eeae3606c11b42edaa7c130d84f5531ec315d167

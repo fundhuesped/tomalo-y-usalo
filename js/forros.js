@@ -104,8 +104,9 @@ function inicializarMapa(idContenedorMapa) {
 } 
 
 function actualizarTamanioMapa(idContenedorMapa, mapa) {
-    $('#'+idContenedorMapa).width($(window).width());
-    $('#'+idContenedorMapa).height(($(window).height()-$('.ui-navbar').height()));  
+	var domMapa = $("#"+idContenedorMapa);
+    domMapa.width($(window).width());
+    domMapa.height($(window).height() - domMapa.parents(".ui-page").children('.ui-header').outerHeight(true) - domMapa.parents(".ui-page").children('.ui-footer').outerHeight(true));  
     google.maps.event.trigger(mapa, 'resize'); 
 }
 function cerrar (elem) {

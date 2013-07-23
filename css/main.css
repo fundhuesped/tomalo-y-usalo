@@ -57,6 +57,15 @@ strong {
 	border-radius: 0 /*{global-radii-buttons}*/;
 }
 
+.ui-footer .ui-btn-inner {
+	border-top: none;
+	border-color: rgba(255,255,255,0);
+}
+
+.ui-footer {
+	background-color: white;
+}
+
 /** Estilos nuevos **/
 
 .flex-container {
@@ -159,8 +168,12 @@ strong {
 	margin-top: 15px;
 }
 
+.ui-footer {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
 .ui-footer a:first-child, .ui-footer a:last-child {
-	margin-bottom: 20px;
 	margin-left: 10px;
 	margin-right:10px;
 }

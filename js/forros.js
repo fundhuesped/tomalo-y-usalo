@@ -1,12 +1,16 @@
       function main_forro() {
+
         var mapa = inicializarMapa('forros-map');
+        $('#preservativos-search-panel-button').on('click', function() {
+			$(".forros-map-menu").toggle();
+		});
 
         //autocomplete del mapa
         $("#geocomplete").geocomplete({
             map: mapa,
             country: 'ar'
         }).bind("geocode:result", function(event, result){
-            $(".forros-map-menu").toggle();
+            $(".forros-map-menu").toggle();            
         });
         $("#geocomplete").geocomplete("forros-map"); 
         

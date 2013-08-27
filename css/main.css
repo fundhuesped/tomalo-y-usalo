@@ -197,6 +197,7 @@ div.cartodb-popup h4 {
 .ui-footer {
 	padding-bottom: 15px;
 	padding-top: 15px;
+	text-align: center;
 }
 
 .ui-footer a:first-child, .ui-footer a:last-child {
@@ -208,6 +209,7 @@ div.cartodb-popup h4 {
 	background-image: url('../img/atras-icon.png');
 	width: 48px;
 	height: 48px;
+	float: left;
 }
 
 .home-button-footer {
@@ -219,6 +221,7 @@ div.cartodb-popup h4 {
 .info-button-footer {
 	width: 48px;
 	height: 48px;
+	float: right;
 }
 
 /* barras blancas del header */

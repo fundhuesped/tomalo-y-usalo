@@ -76,6 +76,7 @@ strong {
 div.cartodb-popup h4 {
     color: #fff;
 }
+
 .flex-container {
 	display: -webkit-box !important;
 	display: -moz-box !important;
@@ -153,6 +154,23 @@ div.cartodb-popup h4 {
 #huesped-logo-image {
 	width: 100px;
 	margin-bottom: 8px;
+}
+
+.home-buscar .ui-content {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.home-buscar .ui-footer {
+	padding: 0;
+}
+
+#huesped-logo-link {
+	float: left;
+}
+
+#info-popup-image {
+	margin-right: 10px;
 }
 
 /** Pantalla inicial Test y Preservativos **/

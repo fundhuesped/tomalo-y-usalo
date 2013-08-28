@@ -36,9 +36,7 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tool
         var mapa = inicializarMapa(idContenedorMapa);
         
         //agrega layer de cartoDB
-        cartodb.createLayer(mapa, cartodblayer)
-        .addTo(mapa)
-        .on('done', function(layer) {
+        cartodb.createLayer(mapa, cartodblayer, function(layer) {
           //agregamos el marcador con la ubicacion actual (geoposition = location de phonegap)
           navigator.geolocation.getCurrentPosition(function(geoposition){
                 marcarpunto(geoposition,mapa,'#a2001e', true);
@@ -56,10 +54,11 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tool
           });
 
         })
+        .addTo(mapa)
         .on('error', function(error) {
            //si hay algun error con cartoDB
         });
-      };
+}
       
 /*
  * Agrega un marcador al mapa

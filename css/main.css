@@ -255,6 +255,10 @@ div.cartodb-popup h4 {
 	color: #00a4a7;
 }
 
+.preservativos-page .ui-content, .tests-page .ui-content {
+	text-align: center;
+}
+
 .preservativos-page .info-button-footer {
 	background-image: url('../img/info-icon-preservativo.png');
 }
@@ -273,6 +277,10 @@ div.cartodb-popup h4 {
 
 .tests-page .info-button-footer {
 	background-image: url('../img/info-icon-test.png');
+}
+
+.tests-page .ui-content div, .preservativos-page .ui-content div {
+	margin-top: 10px;
 }
 
 /** Pantalla de mapa de preservativo **/

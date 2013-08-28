@@ -71,7 +71,7 @@ function marcarpunto(geoposition, mapa, color, centrar) {
                     });
     var circle = new google.maps.Circle({
         map: mapa,
-        radius: 500,    // 10 miles in metres
+        radius: geoposition.coords.accuracy,    // 10 miles in metres
         fillColor: color,//'#a2001e',
         
         strokeWeight: 0 

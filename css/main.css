@@ -72,6 +72,18 @@ strong {
 	background-color: white;
 }
 
+.ui-footer-fixed.ui-fixed-hidden {
+	bottom: -1px;
+	padding-bottom: 15px;
+	position: fixed;
+}
+
+.ui-header-fixed.ui-fixed-hidden {
+	top: -1px;
+	padding-top: 15px;
+	position: fixed;
+}
+
 /** Estilos nuevos **/
 div.cartodb-popup h4 {
     color: #fff;
@@ -277,10 +289,6 @@ div.cartodb-popup h4 {
 
 .tests-page .info-button-footer {
 	background-image: url('../img/info-icon-test.png');
-}
-
-.tests-page .ui-content div, .preservativos-page .ui-content div {
-	margin-top: 10px;
 }
 
 /** Pantalla de mapa de preservativo **/

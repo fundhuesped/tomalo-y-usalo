@@ -81,7 +81,7 @@ var app = {
 		$("#preservativos-search-panel-button").click( function(e) {
 			$(".forros-autocomplete-menu").toggle();
 		});
-		
+
         //document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler

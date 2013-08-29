@@ -2,13 +2,12 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
     var mapa = inicializarMapa(idContenedorMapa);
 
     //autocomplete del mapa
-    $("#"+idAutocompleteInput).geocomplete({
-        map: mapa,
-        country: 'ar'
-    }).bind("geocode:result", function(event, result){
-        $("."+idAutocompleteInput+"-menu").toggle();
-    });
-    $("#"+idAutocompleteInput).geocomplete(idContenedorMapa); 
+	$("#"+idAutocompleteInput).geocomplete({
+		map: mapa,
+		country: 'ar'
+	}).bind("geocode:result", function(event, result){
+		$("."+idAutocompleteInput+"-menu").hide();
+	});
 
     //agrega layer de cartoDB
     cartodb.createLayer(mapa,cartodblayer,function(layer) {   

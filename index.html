@@ -71,8 +71,8 @@
 			</div><!-- /header -->
             <div data-role="content" data-theme="none">
 				<div class="titulo"><strong>¿DÓNDE ESTÁS?</strong></div>
-				<div><a href="#forros-calle" data-theme="none" class="buscar-icon-link"><img src="img/busca-icon.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a></div>
-				<div><a href="#forros-ubicame" data-theme="none" class="ubicame-icon-link"><img src="img/ubicame-icon.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a></div>
+				<div><a href="#forros-page" data-theme="none" class="buscar-icon-link"><img src="img/busca-icon.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a></div>
+				<div><a href="#forros-page" data-theme="none" data-geolocate="true" class="ubicame-icon-link"><img src="img/ubicame-icon.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a></div>
             </div><!-- /content -->
             <div data-role="footer" data-position="fixed" data-theme="none">
 				<a href="#start" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
@@ -87,8 +87,8 @@
 			</div><!-- /header -->
 			<div data-role="content" data-theme="none">
 				<div class="titulo"><strong>¿DÓNDE ESTÁS?</strong></div>
-				<div><a href="#test-calle" data-theme="none" class="buscar-icon-link"><img src="img/busca-icon-test.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a></div>
-				<div><a href="#test-ubicame" data-theme="none" class="ubicame-icon-link"><img src="img/ubicame-icon-test.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a></div>
+				<div><a href="#test-page" data-theme="none" data-geolocate="false" class="buscar-icon-link"><img src="img/busca-icon-test.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a></div>
+				<div><a href="#test-page" data-theme="none" data-geolocate="true" class="ubicame-icon-link"><img src="img/ubicame-icon-test.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a></div>
             </div><!-- /content -->
             <div data-role="footer" data-position="fixed" data-theme="none">
 				<a href="#start" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
@@ -97,7 +97,7 @@
             </div><!-- /footer -->
         </div>
         
-        <div data-role="page" id="forros-calle" class="preservativos-page">
+        <div data-role="page" id="forros-page" class="preservativos-page">
 			<div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
 				<div class="header-button" id="preservativos-search-panel-button">
 					<span class="icon-bar"></span>
@@ -120,7 +120,7 @@
         </div>
         
         
-         <div data-role="page" id="test-calle" class="tests-page" >
+         <div data-role="page" id="test-page" class="tests-page" >
             <div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
                     <div class="header-button" id="preservativos-search-panel-button">
                             <span class="icon-bar"></span>
@@ -133,53 +133,12 @@
                <div class="test-autocomplete-menu">
                    <input type="search" name="search-mini" id="test-autocomplete" value="" data-mini="true" />
                </div>
-               <div id="test-calle-map" class="test-calle-map" style="width: 100%; height: 100%;" ></div>
+               <div id="test-map" class="test-calle-map" style="width: 100%; height: 100%;" ></div>
            </div><!-- /content -->
             <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
                 <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
 				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
 				<a href="#info" class="info-button-footer" data-theme="none"></a></li>
-            </div><!-- /footer -->
-        </div>
-        
-        <div data-role="page" id="test-ubicame" class="tests-page">
-            <div data-role="header" data-position="fixed" data-theme="none">
-                <div class="header-button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </div>
-                <strong>TEST DE VIH</strong>
-            </div><!-- /header -->
-            <div data-role="content" class="nomargin" >
-                
-                <div id="test-map-ubicame" class="forros-map" style="width: 100%; height: 100%;" ></div>
-            </div><!-- /content -->
-             <div data-role="footer" data-position="fixed" data-theme="none">
-                        <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
-                    <a href="#start" class="home-button-footer" data-theme="none"></a></li>
-                    <a href="#info" class="info-button-footer" data-theme="none"></a></li>
-            </div><!-- /footer -->
-        </div>
-        
-        <!-- ubicame -->
-        <div data-role="page" id="forros-ubicame" class="preservativos-page">
-            <div data-role="header" data-position="fixed" data-theme="none">
-                <div class="header-button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </div>
-                <strong>PRESERVATIVOS</strong>
-            </div><!-- /header -->
-            <div data-role="content" class="nomargin" >
-                
-                <div id="forros-map-ubicame" class="forros-map" style="width: 100%; height: 100%;" ></div>
-            </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none">
-               <a href="#forros-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
-               <a href="#start" class="home-button-footer" data-theme="none"></a></li>
-               <a href="#info" class="info-button-footer" data-theme="none"></a></li>
             </div><!-- /footer -->
         </div>
         

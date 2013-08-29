@@ -1,4 +1,4 @@
-function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipTplId) {
+function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipTplId, geolocate) {
     var mapa = inicializarMapa(idContenedorMapa);
 
     //autocomplete del mapa
@@ -11,10 +11,12 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tool
     $("#"+idAutocompleteInput).geocomplete(idContenedorMapa); 
 
     //agrega layer de cartoDB
-    cartodb.createLayer(mapa,cartodblayer )
-    .addTo(mapa)
-    .on('done', function(layer) {   
-        
+    cartodb.createLayer(mapa,cartodblayer,function(layer) {   
+        if (geolocate) {
+			navigator.geolocation.getCurrentPosition(function(geoposition){
+				marcarpunto(geoposition,mapa,'#a2001e', true);
+			});
+		}
         //tooltips
         var sublayer = layer.getSubLayer(0);
         sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
@@ -26,38 +28,10 @@ function mapa_porcalle(idContenedorMapa, idAutocompleteInput, cartodblayer, tool
       });
 
     })
+    .addTo(mapa)
     .on('error', function(error) {
        //si hay algun error con cartoDB
     });
-};
-
-
- function mapa_ubicame(idContenedorMapa, cartodblayer,tooltipTplId) {
-        var mapa = inicializarMapa(idContenedorMapa);
-        
-        //agrega layer de cartoDB
-        cartodb.createLayer(mapa, cartodblayer, function(layer) {
-          //agregamos el marcador con la ubicacion actual (geoposition = location de phonegap)
-          navigator.geolocation.getCurrentPosition(function(geoposition){
-                marcarpunto(geoposition,mapa,'#a2001e', true);
-          });
-  
-           
-            //tooltips
-            var sublayer = layer.getSubLayer(0);
-            sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
-            sublayer.on('featureOver', function(e, pos, latlng, data) {
-          });
-
-          sublayer.on('error', function(err) {
-              //si hay algun error en el tooltip
-          });
-
-        })
-        .addTo(mapa)
-        .on('error', function(error) {
-           //si hay algun error con cartoDB
-        });
 }
       
 /*

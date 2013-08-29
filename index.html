@@ -13,6 +13,14 @@
         <meta name="author" content="Fundación Huésped">
     </head>
     <body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=393722157405746";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
         <div data-role="page" id="start" class="home-buscar" data-theme="none">
             <!-- content -->
             <div data-role="content" data-theme="none">
@@ -43,10 +51,20 @@
         
         <div id="info-huesped" data-role="dialog">
 			<div data-role="header" data-theme="none" role="banner">
-				<h1 class="ui-title" role="heading" aria-level="1">Info</h1>
+				<h1 class="ui-title" role="heading" aria-level="1">Sobre nosotros</h1>
 			</div>
-			<div data-role="content" data-theme="none">
-				<h2>Fundación Huésped</h2>
+			<div data-role="content" data-theme="none" style="text-align: center;">
+				<h2><a href="http://www.huesped.org.ar" style="color:red; text-decoration:none">Fundación Huésped</a></h2>
+				<p>Somos una organización que trabaja en la lucha contra el VIH/sida. Sumate para que haya más personas informadas, más prevención y menos VIH.</p>
+				<div style="text-align: center">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos." data-via="fundhuesped" data-lang="es" data-size="large" data-related="fundhuesped" data-hashtags="TomaloYUsalo">Twittear</a>
+				</div>
+				<div style="text-align: center">
+					<a href="https://twitter.com/fundhuesped" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large">Seguir a @fundhuesped</a>
+				</div>
+				<div style="text-align: center">
+					<div class="fb-like" data-href="http://donde.huesped.org.ar/" data-width="225" data-show-faces="true" data-send="false"></div>
+				</div>
 			</div>
 		</div>
         
@@ -191,5 +209,6 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </body>
 </html>

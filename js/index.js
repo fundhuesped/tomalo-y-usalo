@@ -75,6 +75,12 @@ var app = {
 		$("#test-menu .ubicame-icon-link").click( function(e) {
 			app.env.geolocate = true;
 		});
+		$("#test-search-panel-button").click( function(e) {
+			$(".test-autocomplete-menu").toggle();
+		});
+		$("#preservativos-search-panel-button").click( function(e) {
+			$(".forros-autocomplete-menu").toggle();
+		});
 		
         //document.addEventListener('deviceready', this.onDeviceReady, false);
     },

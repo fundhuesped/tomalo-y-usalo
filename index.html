@@ -1,214 +1,96 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
-        <link rel="stylesheet" type="text/css" href="spec/jquery-mobile/jquery.mobile.css" />
-        <link rel="stylesheet" type="text/css" href="css/cartodb.css" />
-        <link rel="stylesheet" type="text/css" href="css/main2.css" />
-        <title>Tomalo y Usalo App | Fundación Huésped</title>
-        <meta name="description" content="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos.">
-        <meta name="author" content="Fundación Huésped">
-    </head>
-    <body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=393722157405746";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-        <div data-role="page" id="start" class="home-buscar" data-theme="none">
-            <!-- content -->
-            <div data-role="content" data-theme="none">
-				<div>
-				<a href="#test-menu" id="busca-test-main-link">
-					<img src="img/busca-test.png" id="busca-test-image"/>
-				</a>
-				</div>
-				<div>
-				<a href="#forros-menu" id="busca-preservativo-main-link">
-					<img src="img/busca-preservativo.png" id="busca-preservativo-image"/>
-				</a>
-				</div>
-				<div>
-					<p>Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos.</p>
-				</div>
-            </div>
-			<div data-role="footer" data-position="fixed" data-theme="none">
-				<a href="http://huesped.org.ar" class="flex-item-nowrap" id="huesped-logo-link" data-theme="none">
-					<img src="img/logo-huesped.png" id="huesped-logo-image"/>
-				</a>
-				<div class="flex-item-nowrap" id="info-popup">
-					<a href="#info-huesped" data-rel="dialog"><img src="img/info-icon-home.png" id="info-popup-image" /></a>
-				</div>
-			</div>
-            <!-- /content -->
-        </div>
-        
-        <div id="info-huesped" data-role="dialog">
-			<div data-role="header" data-theme="none" role="banner">
-				<h1 class="ui-title" role="heading" aria-level="1">Sobre nosotros</h1>
-			</div>
-			<div data-role="content" data-theme="none" style="text-align: center;">
-				<h2><a href="http://www.huesped.org.ar" style="color:red; text-decoration:none">Fundación Huésped</a></h2>
-				<p>Somos una organización que trabaja en la lucha contra el VIH/sida. Sumate para que haya más personas informadas, más prevención y menos VIH.</p>
-				<div style="text-align: center">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos." data-via="fundhuesped" data-lang="es" data-size="large" data-related="fundhuesped" data-hashtags="TomaloYUsalo">Twittear</a>
-				</div>
-				<div style="text-align: center">
-					<a href="https://twitter.com/fundhuesped" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large">Seguir a @fundhuesped</a>
-				</div>
-				<div style="text-align: center">
-					<div class="fb-like" data-href="http://donde.huesped.org.ar/" data-width="225" data-show-faces="true" data-send="false"></div>
-				</div>
-			</div>
-		</div>
-        
-        <div data-role="page" id="forros-menu" data-theme="none" class="preservativos-page">
-			<div data-role="header" data-position="fixed" data-theme="none">
-				<strong>PRESERVATIVOS</strong>
-			</div><!-- /header -->
-            <div data-role="content" data-theme="none">
-				<div class="titulo"><strong>¿DÓNDE ESTÁS?</strong></div>
-				<div><a href="#forros-page" data-theme="none" class="buscar-icon-link"><img src="img/busca-icon.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a></div>
-				<div><a href="#forros-page" data-theme="none" data-geolocate="true" class="ubicame-icon-link"><img src="img/ubicame-icon.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a></div>
-            </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none">
-				<a href="#start" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
-				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
-				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
-            </div><!-- /footer -->
-        </div>
-        
-        <div data-role="page" id="test-menu" class="tests-page">
-			<div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
-				<strong>TEST DE VIH</strong>
-			</div><!-- /header -->
-			<div data-role="content" data-theme="none">
-				<div class="titulo"><strong>¿DÓNDE ESTÁS?</strong></div>
-				<div><a href="#test-page" data-theme="none" data-geolocate="false" class="buscar-icon-link"><img src="img/busca-icon-test.png" alt="Icono de búsqueda" /><strong>BUSCÁ</strong></a></div>
-				<div><a href="#test-page" data-theme="none" data-geolocate="true" class="ubicame-icon-link"><img src="img/ubicame-icon-test.png" alt="Icono de ubicación" /><strong>UBICAME</strong></a></div>
-            </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none">
-				<a href="#start" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
-				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
-				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
-            </div><!-- /footer -->
-        </div>
-        
-        <div data-role="page" id="forros-page" class="preservativos-page">
-			<div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
-				<div class="header-button" id="preservativos-search-panel-button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</div>
-				<strong>PRESERVATIVOS</strong>
-			</div><!-- /header -->
-           <div data-role="content" class="nomargin" >
-               <div class="forros-autocomplete-menu">
-                   <input type="search" name="search-mini" id="forros-autocomplete" value="" data-mini="true" />
-               </div>
-               <div id="forros-map" class="forros-map" style="width: 100%; height: 100%;" ></div>
-           </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
-				<a href="#forros-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
-				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
-				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
-            </div><!-- /footer -->
-        </div>
-        
-        
-         <div data-role="page" id="test-page" class="tests-page" >
-            <div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
-                    <div class="header-button" id="test-search-panel-button">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                    </div>
-                    <strong>TEST DE VIH</strong>
-            </div><!-- /header -->
-           <div data-role="content" class="nomargin" >
-               <div class="test-autocomplete-menu">
-                   <input type="search" name="search-mini" id="test-autocomplete" value="" data-mini="true" />
-               </div>
-               <div id="test-map" class="test-calle-map" style="width: 100%; height: 100%;" ></div>
-           </div><!-- /content -->
-            <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
-                <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
-				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
-				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
-            </div><!-- /footer -->
-        </div>
-        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="spec/jquery-mobile/jquery.mobile.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-        <script src="spec/gmaps.js/jquery.geocomplete.js"></script>
-        <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.nojquery.js"></script>
-        <script type="text/javascript" src="js/forros.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-		<script>
-            $(document).bind("mobileinit", function(){
-              $.extend(  $.mobile , {
-                defaultPageTransition: 'none',
-                defaultDialogTransition: 'none'
-              });
-            });
-            $(document).ready( function() {
-				app.initialize();
-			});
-        </script> 
-        <script type="infowindow/html" id="infowindow_template">
-            <div class="cartodb-popup" id="cartodb-tooltip" onclick="cerrar(this)" >
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+@font-face {
+  font-family: "Gotham Round";
+  src: url("css/GothamRnd-Medium.woff") format("woff");
+}
 
-               <div class="cartodb-popup-content-wrapper forros-tooltip-popup">
-                 <div class="cartodb-popup-content">
-                   <h3>{{content.data.establecimiento}}</h3>
-                   <!-- content.data contains the field info -->
-                   <h4> {{content.data.calle}} {{content.data.altura}}</h4>
-                   <h4> <strong>Horario:</strong> {{content.data.horario_atencion}}</h4>
-                   <h4> <strong>Teléfono:</strong> <a href="tel:{{content.data.tel_estab}}">{{content.data.tel_estab}}</a></h4>
-                   <h4> <strong>Barrio:</strong> {{content.data.barrio_localidad}}</h4>
-                   <h4> {{content.data.provincia}}</h4>
-                 </div>
-               </div>
-               <div class="cartodb-popup-tip-container"></div>
-            </div>
-        </script>
-        <script type="infowindow/html" id="infowindow_template_forros">
-            <div class="cartodb-popup dark" id="cartodb-tooltip" onclick="cerrar(this)" >
-
-               <div class="cartodb-popup-content-wrapper forros-tooltip-popup">
-                 <div class="cartodb-popup-content">
-                   <h3>{{content.data.establecimiento}}</h3>
-                   <!-- content.data contains the field info -->
-                   <h4> {{content.data.calle}} {{content.data.altura}}</h4>
-                   <h4> <strong>Horario:</strong> {{content.data.horario_atencion}}</h4>
-                   <h4> <strong>Teléfono:</strong> <a href="tel:{{content.data.tel_estab}}">{{content.data.tel_estab}}</a></h4>
-                   <h4> <strong>Barrio:</strong> {{content.data.barrio_localidad}}</h4>
-                   <h4> {{content.data.provincia}}</h4>
-                 </div>
-               </div>
-               <div class="cartodb-popup-tip-container"></div>
-            </div>
-        </script>
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-18980142-1']);
-			_gaq.push(['_setDomainName', 'huesped.org.ar']);
-			_gaq.push(['_trackPageview']);
-
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </body>
+@font-face {
+  font-family: "Gotham Round Bold";
+  src: url("css/GothamRnd-Bold.woff") format("woff");
+}
+body{
+	font-family: "Gotham Round";
+}
+.test{
+	width: 40%;
+	margin-top:20px;
+	margin-left: 30% 
+}
+.forros{
+	width: 40%;
+	margin-top:20px;
+	margin-left: 30% 
+}
+.texto{
+	margin-top: 20px;
+	text-align: center;
+}
+.logo{
+	position: absolute;
+	width: 30%;
+	bottom: 10px;
+	left: 10px; 
+}
+.info{
+	position: absolute;
+	width: 10%;
+	bottom: 10px;
+	right: 10px; 
+}
+.popup{
+display: none;
+position: fixed;
+top: 50%;
+margin-top: -140px;
+width: 70%;
+margin-left: 13%;
+background-color: #747577;
+color: white;
+}
+.titulo{
+	margin-top: 30px;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+.textopop{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.cerrar{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 20px;
+}
+</style>
+<body>
+	<img src="img/busca-test.png" class="test">
+	<img src="img/busca-preservativo.png" class="forros">
+	<div class="texto">Conocé dónde hacerte el test de HIV o dónde conseguir preservativos gratuitos.</div>
+	<img src="img/info-icon-home.png" class="info" onclick="abrirpop();">
+	<a href="http://huesped.org.ar" ><img src="img/logo-huesped.png" class="logo"></a>
+	<div class="popup" id="popup">
+		<div class="cerrar" onclick="cerrarpop();">x</div>
+		<div class="titulo">Fundacion Huésped</div>
+		<div class="textopop">Somos una organización que trabaja en la lucha contra el VIH/sida. Sumate para que haya más prevención y menos VIH.</div>
+	</div>
+</body>
+<script>
+function cerrarpop(){
+	document.getElementById('popup').style.display = "none";
+}
+function abrirpop(){
+	document.getElementById('popup').style.display = "block";
+}
+</script>
 </html>

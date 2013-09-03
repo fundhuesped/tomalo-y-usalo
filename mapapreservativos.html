@@ -10,19 +10,25 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
-		<div class="header">
+		<div class="barra">
 			<strong>PRESERVATIVOS</strong>
-			<div class="header-button" id="preservativos-search-panel-button">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+			<div class="btnMenu">
+				<div class="lMenu"></div>
+				<div class="lMenu"></div>
+				<div class="lMenu"></div>
 			</div>
 		</div>
+		<div class="menu" id="menu">
+			<img src="img/info-icon-homeBlanco.png" class="info" onclick="abrirpop();">
+			<input type="search" name="search-mini" id="preservativos-autocomplete" value="" data-mini="true" class="buscar"/>
+		</div>
 		<div class="content">
-		   <div class="preservativos-autocomplete-menu">
-			   <input type="search" name="search-mini" id="preservativos-autocomplete" value="" data-mini="true" />
-		   </div>
 		   <div id="forros-map" class="map" style="width: 100%; height: 100%;" ></div>
+		</div>
+		<div class="popup" id="popup">
+			<div class="cerrar" onclick="cerrarpop();">x</div>
+			<div class="titulo">Fundacion Huésped</div>
+			<div class="textopop">Somos una organización que trabaja en la lucha contra el VIH/sida. Sumate para que haya más prevención y menos VIH.</div>
 		</div>
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/mapa.js"></script>
@@ -34,7 +40,19 @@
 				var buscar_forros = "http://fundhuesped.cartodb.com/api/v2/viz/9d28261a-f3c2-11e2-b703-417053fa0b43/viz.json";
 				mapa_init('forros-map','forros-autocomplete',buscar_forros,"infowindow_template_forros");
 				$(".preservativos-autocomplete-menu").hide();
+				$(".btnMenu").click(function() {
+					toggleMenu();
+				});
 			});
+			function toggleMenu(){
+				$("#menu").toggle();
+			};
+			function cerrarpop(){
+				document.getElementById('popup').style.display = "none";
+			};
+			function abrirpop(){
+				document.getElementById('popup').style.display = "block";
+			};
 		</script>
     </body>
 </html>

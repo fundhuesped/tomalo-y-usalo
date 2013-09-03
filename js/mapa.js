@@ -79,7 +79,7 @@ function inicializarMapa(idContenedorMapa) {
 function actualizarTamanioMapa(idContenedorMapa, mapa) {
 	var domMapa = $("#"+idContenedorMapa);
     domMapa.width($(window).width());
-    domMapa.height($(window).height() - $('.header').outerHeight(true) - 4);
+    domMapa.height($(window).height() - 50);
     google.maps.event.trigger(mapa, 'resize'); 
 }
 

@@ -1,38 +1,40 @@
 @font-face {
-  font-family: "Gotham Round";
-  src: url("GothamRnd-Medium.woff") format("woff");
+	font-family: "Gotham Round";
+	src: url("GothamRnd-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gotham Round Bold";
-  src: url("GothamRnd-Bold.woff") format("woff");
+	font-family: "Gotham Round Bold";
+	src: url("GothamRnd-Bold.woff") format("woff");
 }
-
-html {
-	font-family: "Gotham Round", sansserif;
+body{
+	font-family: "Gotham Round";
 }
-
-strong {
-	font-family: "Gotham Round Bold", sansserif;
+.barra{
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background-color:red;
+	height: 50px; 
 }
-
-.header-button {
-	float: left;
-	margin-left: 15px;
+.menu{
+	display: none;
+	position: fixed;
+	width: 70%;
+	height: 100%;
+	right:0px;
+	top: 0px;
+	z-index: 4;
+	background-color: red; 
+	margin-top: 50px;
 }
-
-.header > * {
-	display: inline-block;
+.btnMenu{
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
-
-.content {
-	overflow-x: visible;
-	overflow-y: visible;
-	background-color: white;
-}
-
-.header .icon-bar {
-	display: block;
+.lMenu{
 	width: 30px;
 	height: 4px;
 	background-color: white;
@@ -40,24 +42,53 @@ strong {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	margin-top: 4px;
-	color: #ffffff;
-	cursor: pointer;
-	-webkit-box-shadow: 0 0 0x 0px rgb(255, 255, 255);
-	-moz-box-shadow: 0 0 0px 0px rgb(255, 255, 255);
-	box-shadow: 0 0 0px 0px rgb(255, 255, 255);
 }
-
-.preservativos-autocomplete-menu {
-	background-color: #00a4a7;
+.logo{
+	position: absolute;
+	width: 30%;
+	bottom: 10px;
+	left: 10px; 
 }
-
-.preservativos-autocomplete-menu, .test-autocomplete-menu {
-    position: absolute;
-    z-index: 1;
-    width: 80%;
-    height: 100%;
+.info{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 15%;
 }
-
+.popup{
+	display: none;
+	position: fixed;
+	top: 50%;
+	margin-top: -140px;
+	width: 70%;
+	margin-left: 13%;
+	background-color: #747577;
+	color: white;
+}
+.titulo{
+	margin-top: 30px;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+.textopop{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.cerrar{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 20px;
+}
 .map {
-
+	margin-top: 50px;
+}
+.buscar{
+	margin-top: 60px;
+	margin-left: 5%;
+	width: 90%;
 }

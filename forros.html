@@ -1,0 +1,143 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+@font-face {
+	font-family: "Gotham Round";
+	src: url("css/GothamRnd-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Gotham Round Bold";
+	src: url("css/GothamRnd-Bold.woff") format("woff");
+}
+body{
+	font-family: "Gotham Round";
+}
+.barra{
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background-color:red;
+	height: 50px; 
+}
+.menu{
+	display: none;
+	position: fixed;
+	width: 70%;
+	height: 100%;
+	right:0px;
+	top: 0px;
+	background-color: red; 
+}
+.btnMenu{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.lMenu{
+	width: 30px;
+	height: 4px;
+	background-color: white;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: 4px;
+}
+.logo{
+	position: absolute;
+	width: 30%;
+	bottom: 10px;
+	left: 10px; 
+}
+.info{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 15%;
+}
+.popup{
+	display: none;
+	position: fixed;
+	top: 50%;
+	margin-top: -140px;
+	width: 70%;
+	margin-left: 13%;
+	background-color: #747577;
+	color: white;
+}
+.titulo{
+	margin-top: 30px;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+.textopop{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.cerrar{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 20px;
+}
+.mapa{
+	margin-top: 50px;
+}
+.buscar{
+	margin-top: 60px;
+	margin-left: 5%;
+	width: 90%;
+}
+</style>
+<body>
+	<div class="mapa">
+		mapa
+	</div>
+	<div class="barra">
+		<div class="btnMenu" onclick="abrirMenu();">
+			<div class="lMenu"></div>
+			<div class="lMenu"></div>
+			<div class="lMenu"></div>
+		</div>
+	</div>
+	<div class="menu" id="menu">
+		<div class="btnMenu" onclick="cerrarMenu();">
+			<div class="lMenu"></div>
+			<div class="lMenu"></div>
+			<div class="lMenu"></div>
+		</div>
+		<img src="img/info-icon-homeBlanco.png" class="info" onclick="abrirpop();">
+		<input type="search" class="buscar"></div>
+	</div>
+</div>
+
+<div class="popup" id="popup">
+	<div class="cerrar" onclick="cerrarpop();">x</div>
+	<div class="titulo">Fundacion Huésped</div>
+	<div class="textopop">Somos una organización que trabaja en la lucha contra el VIH/sida. Sumate para que haya más prevención y menos VIH.</div>
+</div>
+</body>
+<script>
+function abrirMenu(){
+	document.getElementById('menu').style.display = "block";
+};
+function cerrarMenu(){
+	document.getElementById('menu').style.display = "none";
+};
+function cerrarpop(){
+	document.getElementById('popup').style.display = "none";
+};
+function abrirpop(){
+	document.getElementById('popup').style.display = "block";
+};
+</script>
+</html>

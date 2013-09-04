@@ -15,7 +15,15 @@ body{
 	width: 100%;
 	top: 0px;
 	left: 0px;
-	background-color:red;
+	background-color: #E200A1;
+	height: 50px; 
+}
+.barraForros{
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #00A4A7;
 	height: 50px; 
 }
 .menu{

@@ -69,9 +69,9 @@ body{
 	margin-left: 13%;
 	background-color: #fff;
 	color: black;
-border-radius: 10px;
-box-shadow: 0 0 20px #ddd;
-background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 40px #000;
+	background: #fff;
 }
 .titulo{
 	margin-top: 30px;
@@ -82,14 +82,22 @@ background: #fff;
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	text-align: center;
 }
 .cerrar{
 	position: absolute;
-	right: 10px;
-	top: 5px;
+	left: 50%;
+	margin-left: -62px;
+	bottom: 10px;
 	font-size: 20px;
+	border: 1px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #000;
+	background: #fff;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .mapa{
 	margin-top: 50px;
@@ -124,9 +132,9 @@ background: #fff;
 </div>
 
 <div class="popup" id="popup">
-	<div class="cerrar" onclick="cerrarpop();">x</div>
 	<div class="titulo">Fundacion Huésped</div>
 	<div class="textopop">Somos una organización que trabaja en la lucha contra el VIH/sida. Sumate para que haya más prevención y menos VIH.</div>
+	<div class="cerrar" onclick="cerrarpop();">Aceptar</div>
 </div>
 </body>
 <script>

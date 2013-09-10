@@ -88,6 +88,8 @@ strong {
 div.cartodb-popup h4 {
     color: #fff;
 }
+
+
 /** Pantalla inicial **/
 
 #busca-test-main-link, #busca-preservativo-main-link {
@@ -240,7 +242,7 @@ div.cartodb-popup h4 {
     position: absolute;
     z-index: 1;
     width: 80%;
-    height: 100%;
+    height: 65%;
 }
 
 .preservativos-autocomplete-menu .ui-btn-corner-all, .test-autocomplete-menu .ui-btn-corner-all {

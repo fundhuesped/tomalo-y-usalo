@@ -36,19 +36,19 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         var tests = "http://fundhuesped.cartodb.com/api/v2/viz/d411feb8-f3c1-11e2-a45e-ddabda956258/viz.json";
-        var buscar_forros = "http://fundhuesped.cartodb.com/api/v2/viz/9d28261a-f3c2-11e2-b703-417053fa0b43/viz.json";
-        $("#forros-page").on('pageshow', function(e, data){
+        var buscar_preservativos = "http://fundhuesped.cartodb.com/api/v2/viz/9d28261a-f3c2-11e2-b703-417053fa0b43/viz.json";
+        $("#preservativos-page").on('pageshow', function(e, data){
             if (!app.env.geolocate) {
-				$(".forros-autocomplete-menu").show();
-				mapa_init('forros-map','forros-autocomplete',buscar_forros,"infowindow_template_forros", false);
+				$(".preservativos-autocomplete-menu").show();
+				mapa_init('preservativos-map','preservativos-autocomplete',buscar_preservativos,"infowindow_template_preservativos", false);
 			}
 			else {
-				$(".forros-autocomplete-menu").hide();
-				mapa_init('forros-map','forros-autocomplete',buscar_forros,"infowindow_template_forros", true);	
+				$(".preservativos-autocomplete-menu").hide();
+				mapa_init('preservativos-map','preservativos-autocomplete',buscar_preservativos,"infowindow_template_preservativos", true);	
 			}
         });
-        $("#forros-page").on("pagehide", function(e) {
-            $("#forros-map").html("");
+        $("#preservativos-page").on("pagehide", function(e) {
+            $("#preservativos-map").html("");
         });
         $("#test-page").on('pageshow', function(e, data){
 			if (!app.env.geolocate) {
@@ -63,10 +63,10 @@ var app = {
          $("#test-page").on("pagehide", function(e) {
             $("#test-map").html("");
         });
-        $("#forros-menu .buscar-icon-link").click( function(e) {
+        $("#preservativos-menu .buscar-icon-link").click( function(e) {
 			app.env.geolocate = false;
 		});
-		$("#forros-menu .ubicame-icon-link").click( function(e) {
+		$("#preservativos-menu .ubicame-icon-link").click( function(e) {
 			app.env.geolocate = true;
 		});
 		$("#test-menu .buscar-icon-link").click( function(e) {
@@ -79,7 +79,7 @@ var app = {
 			$(".test-autocomplete-menu").toggle();
 		});
 		$("#preservativos-search-panel-button").click( function(e) {
-			$(".forros-autocomplete-menu").toggle();
+			$(".preservativos-autocomplete-menu").toggle();
 		});
 
         //document.addEventListener('deviceready', this.onDeviceReady, false);

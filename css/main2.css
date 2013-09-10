@@ -302,14 +302,14 @@ div.cartodb-popup h4 {
     padding: 0px;
 }
 
-.forros-autocomplete-menu, .test-autocomplete-menu {
+.preservativos-autocomplete-menu, .test-autocomplete-menu {
     position: absolute;
     z-index: 1;
     width: 80%;
     height: 100%;
 }
 
-.forros-autocomplete-menu .ui-btn-corner-all, .test-autocomplete-menu .ui-btn-corner-all {
+.preservativos-autocomplete-menu .ui-btn-corner-all, .test-autocomplete-menu .ui-btn-corner-all {
     -webkit-border-radius: 0;
     border-radius: 0;
     margin-left: 10px;
@@ -321,24 +321,24 @@ div.cartodb-popup h4 {
 	background-color: #e2001a;
 }
 
-.preservativos-page .forros-autocomplete-menu {
+.preservativos-page .preservativos-autocomplete-menu {
 	background-color: #00a4a7;
 }
 
-#forros-calle .ui-input-text,#test-calle .ui-input-text {
+#preservativos-calle .ui-input-text,#test-calle .ui-input-text {
     /* padding: 10px; */
     margin: 10px;
 }
-#forros-calle #geocomplete {
+#preservativos-calle #geocomplete {
     border-radius: 0;
 }
-#forros-calle a.ui-input-clear,#test-calle a.ui-input-clear{
+#preservativos-calle a.ui-input-clear,#test-calle a.ui-input-clear{
     //display: none;
     margin-right: 10px;
     margin-top: -10px;
 }
 
-.forros-map {
+.preservativos-map {
 	margin: 0;
 	padding-top: 0;
 	padding-bottom: 0;
@@ -369,7 +369,7 @@ div.cartodb-popup .jspContainer:before {
     background: none;
 }
 
-.forros-tooltip-popup {
+.preservativos-tooltip-popup {
     background-color: #e2001a;
     color: #fff;
     text-shadow: none;

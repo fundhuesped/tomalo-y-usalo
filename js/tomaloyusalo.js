@@ -115,7 +115,7 @@ var DBStorage = {
         console.log("tomamos puntos test");
         this.db.transaction(this.getAllTestPoints,this.error, this.success);
         //cnx.executeSql('INSERT INTO carto_test (id, data, time) VALUES (1, "First row", "asasf")');
-        //cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_forros (id unique, data, time)');
+        //cnx.executeSql('CREATE TABLE IF NOT EXISTS carto_preservativos (id unique, data, time)');
         //this.db.transaction(this.getAllTestPoints, this.errorCNX, this.successCB);
         console.log("fin tomamos puntos test");
     },
@@ -123,7 +123,7 @@ var DBStorage = {
         cnx.executeSql('SELECT * FROM TESTS', [], this.syncTest, this.error);
     },
     getAllForrosPoints: function(cnx) {
-        cnx.executeSql('SELECT * FROM carto_forros', [], this.syncForros, this.error);
+        cnx.executeSql('SELECT * FROM carto_preservativos', [], this.syncForros, this.error);
     },
     error: function(err) {
         console.log("Error processing SQL: "+err.code);
@@ -139,7 +139,7 @@ var DBStorage = {
       
     },
     syncForros: function (cnx, results) {
-        alert("forros");
+        alert("preservativos");
         alert(results.rows.length);
       
     },

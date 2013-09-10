@@ -53,8 +53,15 @@ function marcarpunto(geoposition, mapa, color, centrar) {
     if (typeof(centrar) != 'undefined') {
         mapa.setCenter(position);
         mapa.setZoom(15);
-    } 
-    
+    }
+}
+
+var mobileSafari = false;
+
+function checkMobileSafari() {
+	if (navigator.userAgent.match("iPhone|iPad") && navigator.userAgent.match("Safari")) {
+		mobileSafari = true;
+    }
 }
 
 function inicializarMapa(idContenedorMapa) {
@@ -78,7 +85,10 @@ function inicializarMapa(idContenedorMapa) {
 function actualizarTamanioMapa(idContenedorMapa, mapa) {
 	var domMapa = $("#"+idContenedorMapa);
     domMapa.width($(window).width());
-    domMapa.height($(window).height() - domMapa.parents(".ui-page").children('.ui-header').outerHeight(true) - domMapa.parents(".ui-page").children('.ui-footer').outerHeight(true));  
+    var winHeight = $(window).height();
+    if (mobileSafari)
+		winHeight += 60;
+    domMapa.height(winHeight - domMapa.parents(".ui-page").children('.ui-header').outerHeight(true) - domMapa.parents(".ui-page").children('.ui-footer').outerHeight(true));  
     google.maps.event.trigger(mapa, 'resize'); 
 }
 function cerrar (elem) {

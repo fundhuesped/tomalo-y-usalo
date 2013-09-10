@@ -25,8 +25,9 @@ var app = {
 	},
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
-        
+		
+		checkMobileSafari();
+		this.bindEvents();
         $.mobile.allowCrossDomainPages = true;
         
     },

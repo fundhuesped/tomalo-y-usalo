@@ -10,7 +10,11 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
 	});
 
     //agrega layer de cartoDB
-    cartodb.createLayer(mapa,cartodblayer,function(layer) {   
+    cartodb.createLayer(mapa,cartodblayer, {
+		cartodb_logo: false
+	})
+    .addTo(mapa)
+    .on('done', function(layer) {   
         if (geolocate) {
 			navigator.geolocation.getCurrentPosition(function(geoposition){
 				marcarpunto(geoposition,mapa,'#a2001e', true);
@@ -27,7 +31,6 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
       });
 
     })
-    .addTo(mapa)
     .on('error', function(error) {
        //si hay algun error con cartoDB
     });

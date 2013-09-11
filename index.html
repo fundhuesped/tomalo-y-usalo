@@ -92,6 +92,7 @@
                    <input type="search" name="search-mini" id="preservativos-autocomplete" value="" data-mini="true" />
                    <p><a href="#info-preservativo">Información sobre el preservativo</a></p>
                    <p><a href="#info-huesped" data-rel="dialog">¿Qué es la Fundación Huésped?</a></p>
+                   <p><a href="#nueva-sugerencia-test-page">Sugerir nuevo establecimiento</a></p>
                </div>
                <div id="preservativos-map" class="preservativos-map" style="width: 100%; height: 100%;" ></div>
            </div><!-- /content -->
@@ -117,8 +118,75 @@
                    <input type="search" name="search-mini" id="test-autocomplete" value="" data-mini="true" />
                    <p><a href="#info-test">Información sobre el Test de VIH</a></p>
                    <p><a href="#info-huesped" data-rel="dialog">¿Qué es la Fundación Huésped?</a></p>
+                   <p><a href="#nueva-sugerencia-test-page">Sugerir nuevo establecimiento</a></p>
                </div>
                <div id="test-map" class="test-calle-map" style="width: 100%; height: 100%;" ></div>
+           </div><!-- /content -->
+            <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
+                <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
+				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
+				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
+            </div><!-- /footer -->
+        </div>
+        
+		<div data-role="page" id="nueva-sugerencia-test-page" class="tests-page" >
+            <div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
+				<strong>SUGERIR LUGAR</strong>
+            </div><!-- /header -->
+           <div data-role="content">
+			   <form action="http://www.huesped.org.ar/donde/sugerencias/nueva" method="post">
+				   <div data-role="fieldcontain">
+					   <label for="nombre">Nombre establecimiento:</label>
+					   <input type="text" name="nombre" id="nombre" value="" required="true" placeholder="Nombre" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="tipo">Tipo establecimiento:</label>
+					   <input type="text" name="tipo" id="tipo" value="" required="true" placeholder="Tipo" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+						<label for="testeo">¿Se puede realizar un testeo?</label>
+						<select name="testeo" id="testeo" data-role="slider" data-mini="true">
+							<option value="no">No</option>
+							<option value="si">Si</option>
+						</select>
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="calle">Calle:</label>
+					   <input type="text" name="calle" id="calle" value="" required="true" placeholder="Calle" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="altura">Altura:</label>
+					   <input type="tel" name="altura" id="altura" value="" required="true" placeholder="Altura" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="pisodepto">Piso y depto:</label>
+					   <input type="text" name="pisodepto" id="pisodepto" value="" placeholder="Piso y depto" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="barrio">Barrio/Localidad:</label>
+					   <input type="text" name="barrio" id="barrio" value="" placeholder="Barrio/Localidad" data-mini="true" required="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="comuna">Comuna/Departamento/Partido:</label>
+					   <input type="text" name="comuna" id="comuna" value="" placeholder="Comuna/Departamento/Partido" data-mini="true" required="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="provincia">Provincia:</label>
+					   <input type="text" name="provincia" id="provincia" value="" required="true" placeholder="Provincia" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="pais">País:</label>
+					   <input type="text" name="pais" id="pais" value="" required="true" placeholder="País" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="tel">Tel:</label>
+					   <input type="tel" name="tel" id="tel" value="" placeholder="Teléfono" data-mini="true">
+				   </div>
+				   <div data-role="fieldcontain">
+					   <label for="horario">Horario:</label>
+					   <input type="text" name="horario" id="horario" value="" placeholder="Horario de atención" data-mini="true">
+				   </div>
+			   </form>
            </div><!-- /content -->
             <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
                 <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>

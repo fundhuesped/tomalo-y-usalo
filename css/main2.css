@@ -299,8 +299,9 @@ div.cartodb-popup h4 {
     margin-left: 0;
     background-color: transparent;
     border: none;
-    font-size:12px;
+    font-size:13px;
     font-weight: normal;
+    left: 10px !important;
 }
 .pac-item {
     color: #fff;

@@ -254,8 +254,9 @@ div.cartodb-popup h4 {
 }
 
 .ui-input-clear {
-	top:-8px;
-	margin: 0;
+	top: 4px !important;
+	right: 4px !important;
+	margin: 0 !important;
 }
 
 .test-autocomplete-menu {
@@ -284,19 +285,23 @@ div.cartodb-popup h4 {
 }
 
 .pac-container {
-    margin-top: 1px;
+    margin-top: 0;
     margin-left: 0;
     background-color: transparent;
     border: none;
+    font-size:12px;
+    font-weight: normal;
 }
 .pac-item {
     color: #fff;
-    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .pac-item:hover {
     color: #87888a;
-    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .pac-container:after {

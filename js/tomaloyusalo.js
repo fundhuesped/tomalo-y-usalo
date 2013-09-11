@@ -1,6 +1,10 @@
+var activeMenu = '';
+
 function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipTplId, geolocate) {
     var mapa = inicializarMapa(idContenedorMapa);
-
+    
+    activeMenu = "."+idAutocompleteInput+"-menu";
+    
     //autocomplete del mapa
 	$("#"+idAutocompleteInput).geocomplete({
 		map: mapa,
@@ -31,10 +35,10 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
       });
       
       setTimeout( function() {
-		$(".pac-container").height($("."+idAutocompleteInput+"-menu").height() - $("."+idAutocompleteInput+"-menu .ui-input-search").outerHeight(true));
-		$(".pac-container").width($("#"+idAutocompleteInput+"-menu .ui-input-search").width());
-		$(".pac-container").css("background-color", $("."+idAutocompleteInput+"-menu").css("background-color"));
-		$(".pac-container").css("overflow", "scroll");
+		$(".pac-container").height($(activeMenu).height() - $(activeMenu + " .ui-input-search").outerHeight(true));
+		$(".pac-container").width($(activeMenu + " .ui-input-search").width());
+		$(".pac-container").css("background-color", $(activeMenu).css("background-color"));
+		$(".pac-container").css("overflow", "auto");
 		$(".pac-container").css("overflow-x", "hidden");
 		$(".pac-container").css("-webkit-overflow-scrolling", "touch");
 	  }, 100);
@@ -100,6 +104,8 @@ function actualizarTamanioMapa(idContenedorMapa, mapa) {
     if (mobileSafari)
 		winHeight += 60;
     domMapa.height(winHeight - domMapa.parents(".ui-page").children('.ui-header').outerHeight(true) - domMapa.parents(".ui-page").children('.ui-footer').outerHeight(true));  
+    $(".pac-container").height($(activeMenu).height() - $(activeMenu + " .ui-input-search").outerHeight(true));
+	$(".pac-container").width($(activeMenu + " .ui-input-search").width());
     google.maps.event.trigger(mapa, 'resize'); 
 }
 function cerrar (elem) {

@@ -253,6 +253,11 @@ div.cartodb-popup h4 {
      margin: 10px;
 }
 
+.ui-input-clear {
+	top:-8px;
+	margin: 0;
+}
+
 .test-autocomplete-menu {
 	background-color: #e2001a;
 }
@@ -262,14 +267,12 @@ div.cartodb-popup h4 {
 }
 
 #preservativos-calle .ui-input-text,#test-calle .ui-input-text {
-    /* padding: 10px; */
     margin: 10px;
 }
 #preservativos-calle #geocomplete {
     border-radius: 0;
 }
 #preservativos-calle a.ui-input-clear,#test-calle a.ui-input-clear{
-    //display: none;
     margin-right: 10px;
     margin-top: -10px;
 }
@@ -281,9 +284,8 @@ div.cartodb-popup h4 {
 }
 
 .pac-container {
-    margin-top: 1%;
+    margin-top: 1px;
     margin-left: 0;
-    /* margin-left: 1%; */
     background-color: transparent;
     border: none;
 }

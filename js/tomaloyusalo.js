@@ -8,7 +8,7 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
 	}).bind("geocode:result", function(event, result){
 		$("."+idAutocompleteInput+"-menu").hide();
 	});
-
+	
     //agrega layer de cartoDB
     cartodb.createLayer(mapa,cartodblayer, {
 		cartodb_logo: false
@@ -29,7 +29,15 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
       sublayer.on('error', function(err) {
           //si hay algun error en el tooltip
       });
-
+      
+      setTimeout( function() {
+		$(".pac-container").height($("."+idAutocompleteInput+"-menu").height() - $("."+idAutocompleteInput+"-menu .ui-input-search").outerHeight(true));
+		$(".pac-container").width($("#"+idAutocompleteInput+"-menu .ui-input-search").width());
+		$(".pac-container").css("background-color", $("."+idAutocompleteInput+"-menu").css("background-color"));
+		$(".pac-container").css("overflow", "scroll");
+		$(".pac-container").css("overflow-x", "hidden");
+		$(".pac-container").css("-webkit-overflow-scrolling", "touch");
+	  }, 100);
     })
     .on('error', function(error) {
        //si hay algun error con cartoDB

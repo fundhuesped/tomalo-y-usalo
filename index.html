@@ -59,9 +59,13 @@
 				<p style="text-align: center;">
 					<a href="http://www.huesped.org.ar" rel="external">Ir al sitio web oficial</a>
 				</p>
+				<h3>Compartí la app en las redes</h3>
 				<div style="text-align: center">
 					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos." data-via="fundhuesped" data-lang="es" data-size="large" data-related="fundhuesped" data-hashtags="TomaloYUsalo">Twittear</a>
+					<br/>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.huesped.org.ar%2Fdonde" target="_blank">Compartilo en Facebook</a>
 				</div>
+				<h3>Seguinos en las redes sociales</h3>
 				<div style="text-align: center">
 					<a href="https://twitter.com/fundhuesped" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large">Seguir a @fundhuesped</a>
 				</div>
@@ -86,8 +90,8 @@
            <div data-role="content" class="nomargin" >
                <div class="preservativos-autocomplete-menu">
                    <input type="search" name="search-mini" id="preservativos-autocomplete" value="" data-mini="true" />
-                   <p><a href="#info-preservativo">Información Preservativos</a></p>
-                   <p><a href="#info"></a></p>
+                   <p><a href="#info-preservativo">Información sobre el preservativo</a></p>
+                   <p><a href="#info-huesped" data-rel="dialog">¿Qué es la Fundación Huésped?</a></p>
                </div>
                <div id="preservativos-map" class="preservativos-map" style="width: 100%; height: 100%;" ></div>
            </div><!-- /content -->
@@ -111,9 +115,56 @@
            <div data-role="content" class="nomargin" >
                <div class="test-autocomplete-menu">
                    <input type="search" name="search-mini" id="test-autocomplete" value="" data-mini="true" />
+                   <p><a href="#info-test">Información sobre el Test de VIH</a></p>
+                   <p><a href="#info-huesped" data-rel="dialog">¿Qué es la Fundación Huésped?</a></p>
                </div>
                <div id="test-map" class="test-calle-map" style="width: 100%; height: 100%;" ></div>
            </div><!-- /content -->
+            <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
+                <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
+				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
+				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
+            </div><!-- /footer -->
+        </div>
+        
+        <div data-role="page" id="info-preservativo" class="preservativos-page">
+			<div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
+                    <strong>PRESERVATIVOS</strong>
+            </div><!-- /header -->
+            <div data-role="content"  style="text-align: left;">
+				<p>El preservativo es el único método que te protege tanto de embarazos como del VIH y otras infecciones de transmisión sexual. Tenés que usarlo de forma correcta y durante toda la relación sexual.</p>
+				<h2>Uso correcto del preservativo</h2>
+				<p>Guardalo en un lugar fresco y seco para prevenir roturas. Abrí el envoltorio por un extremo, sin usar los dientes o tijeras. Fijate que esté prelubricado o aplicale lubricante a base de agua por dentro y por fuera. No uses lubricantes a base de aceite -vaselinas, cremas, etc.-porque pueden romper el látex.</p>
+				<p>Colocá el preservativo antes de comenzar la relación sexual, con el pene erecto, y dejá un espacio en la punta para el semen. Apretá la punta del preservativo con los dedos para sacar el aire. Luego desenrollalo a lo largo del pene llegar a la base.</p>
+				<p>Si empezás a ponerte un preservativo por el lado incorrecto y no puede desenrollarse, sacalo y usá otro.</p>
+				<p>Al terminar la relación, y antes de que el pene esté flácido, retirá el preservativo cuidando que no se derrame semen.</p>
+				<h2>¿Qué hago si se rompe el preservativo?</h2>
+				<p>En caso de que exista exposición al VIH o incluso si no conocés si tu pareja sexual tiene VIH o no, existe el tratamiento que se llama profilaxis post-exposición. Es una medicación que debe proporcionarse lo antes posible, en las primeras 72 horas luego de la situación de riesgo. Por eso, en caso de una situación de riesgo, consultá con un médico inmediatamente.</p>
+			</div>
+            <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
+                <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
+				<a href="#start" class="home-button-footer" data-theme="none"></a></li>
+				<a href="#info-huesped" data-rel="dialog" class="info-button-footer" data-theme="none"></a></li>
+            </div><!-- /footer -->
+        </div>
+        
+         <div data-role="page" id="info-test" class="tests-page" >
+            <div data-role="header" data-position="fixed" data-theme="none" data-tap-toggle="false">
+                    <strong>TEST DE VIH</strong>
+            </div><!-- /header -->
+            <div data-role="content"  style="text-align: left;">
+				<p>Si nunca te lo hiciste, hace tiempo que no te lo hacés o tuviste alguna relación sexual (vaginal, anal u oral) sin forro, hacete el análisis de VIH. Es simple, rápido y gratuito en los lugares de esta aplicación.</p>
+				<h2>¿Qué es el análisis de VIH?</h2>
+				<p>Es un análisis de sangre que detecta anticuerpos al VIH. Se llama ELISA y, en caso de dar positivo, se confirma su resultado con otra prueba. Es confidencial y gratuito en los lugares indicados en la aplicación. Si tu resultado es negativo, tené en cuenta que podés estar en el período ventana.</p>
+				<h2>¿Qué es el período ventana?</h2>
+				<p>Los anticuerpos del VIH tardan en ser detectados entre 3 semanas y 3 meses después de la infección. Durante este período los análisis podrían resultar negativos aunque la persona tuviera el VIH. Por eso, a pesar de que el resultado de que el análisis sea negativo, se recomienda repetirlo a los 3 meses.</p>
+				<h2>¿Qué significa un resultado positivo?</h2>
+				<p>Que tenés el VIH en tu cuerpo y que podés transmitirlo  a otra persona. No significa que tengas sida. Es importante que consultes a un médico inmediatamente y usar siempre preservativo para evitar la transmisión y el riesgo de re-infección.</p>
+				<h2>¿Cómo se transmite el VIH?</h2>
+				<p>Se transmite por tres vías: relaciones sexuales sin protección (vaginales, anales u orales), comtacto con sangre a través del uso compartido de elementos cortantes o transfusión de sangre no controlada y la transmisión perinatal, de madre a hijo, durante el embarazo, el parto y la lactancia. Cualquier otra vía NO transmite el VIH.</p>
+				<h2>¿Cuál es la diferencia tener VIH y tener sida?</h2>
+				<p>El VIH es el virus que afecta al sistema de defensas el cual, una vez debilitado, permite la aparición de enfermedades. Esta etapa más avanzada es la que se denomina sida. Es decir que no todas las personas que tienen VIH alcanzan la etapa, pero todas las personas a las que se les desarrolla el sida, viven con VIH. Una persona con VIH puede transmitir el virus a otras personas.</p>
+			</div>
             <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
                 <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>
 				<a href="#start" class="home-button-footer" data-theme="none"></a></li>

@@ -267,6 +267,16 @@ div.cartodb-popup h4 {
 	background-color: #00a4a7;
 }
 
+.preservativos-autocomplete-menu a, .test-autocomplete-menu a {
+	color: white !important;
+	text-decoration: none;
+}
+
+.preservativos-autocomplete-menu p, .test-autocomplete-menu p {
+	text-align: left !important;
+	padding-left: 10px;
+}
+
 #preservativos-calle .ui-input-text,#test-calle .ui-input-text {
     margin: 10px;
 }

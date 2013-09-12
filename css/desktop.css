@@ -1,28 +1,53 @@
-#mobile-home {
+.mobile-home {
 	display: none;
 }
 
-#desktop-home {
+.desktop-home {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-#desktop-home .test-side, #desktop-home .preservativo-side {
-	display: inline-block;
+.home-buscar .ui-content, .home-buscar ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.home-buscar ul, .home-buscar .ui-content, .home-buscar {
+	height: 100% !important;
+}
+
+.home-buscar {
+	padding-bottom: 0px !important;
+}
+
+
+.desktop-home ul {
+	display: table;
+	width: 100%;
+}
+
+.desktop-home li {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.desktop-home .test-side, .desktop-home .preservativo-side {
 	width: 50%;
 	height: 100%;
 }
 
-#desktop-home .test-side {
+.desktop-home .test-side {
 	background-color: #E2001A;
 }
 
-#desktop-home .preservativo-side {
+.desktop-home .preservativo-side {
 	background-color: #00a4a7;
 }
 
-.home-buscar .ui-content, .home-buscar ul {
-	margin: 0px;
-	padding: 0px;
+.desktop-home .test-side a {
+
+}
+
+.desktop-home .preservativo-side a {
 }

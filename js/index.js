@@ -79,6 +79,18 @@ var app = {
 				$("#sugerencia-mostrargeolocalizacion").val(geoposition.coords.latitude + ", "+ geoposition.coords.longitude);
 			});
 		});
+		$("#nuevasugerencia").submit(function(e) {
+			$(".ui-loader").show();
+			//cache the form element for use in this function
+			var $this = $(this);
+			//prevent the default submission of the form
+			e.preventDefault();
+			//run an AJAX post request to your server-side script, $this.serialize() is the data from your form being added to the request
+			$.post($this.attr('action'), $this.serialize(), function (responseData) {
+
+			})
+			.always( function() { $(".ui-loader").hide(); });
+		});
     },
     // deviceready Event Handler
     //

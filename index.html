@@ -134,13 +134,15 @@
 				<strong>SUGERIR LUGAR</strong>
             </div><!-- /header -->
            <div data-role="content">
-			   <form action="http://www.huesped.org.ar/donde/sugerencias/nueva" method="post">
+			   <p>A continuación llene el formulario con el nuevo establecimiento. Con * se encuentran marcados los campos requeridos.</p>
+			   <hr >
+			   <form id="nuevasugerencia" action="http://www.huesped.org.ar/donde/sugerencias/nueva" method="post" data-ajax="false">
 				   <div data-role="fieldcontain">
-					   <label for="nombre">Nombre del establecimiento:</label>
+					   <label for="nombre">Nombre del establecimiento: *</label>
 					   <input type="text" name="nombre" id="nombre" value="" required="true" placeholder="Nombre" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="tipo">Tipo del establecimiento:</label>
+					   <label for="tipo">Tipo del establecimiento: *</label>
 					   <input type="text" name="tipo" id="tipo" value="" required="true" placeholder="Tipo" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
@@ -151,11 +153,11 @@
 						</select>
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="calle">Calle:</label>
+					   <label for="calle">Calle: *</label>
 					   <input type="text" name="calle" id="calle" value="" required="true" placeholder="Calle" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="altura">Altura:</label>
+					   <label for="altura">Altura: *</label>
 					   <input type="tel" name="altura" id="altura" value="" required="true" placeholder="Altura" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
@@ -163,19 +165,19 @@
 					   <input type="text" name="pisodepto" id="pisodepto" value="" placeholder="Piso y depto" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="barrio">Barrio/Localidad:</label>
+					   <label for="barrio">Barrio/Localidad: *</label>
 					   <input type="text" name="barrio" id="barrio" value="" placeholder="Barrio/Localidad" data-mini="true" required="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="comuna">Comuna/Departamento/Partido:</label>
+					   <label for="comuna">Comuna/Departamento/Partido: *</label>
 					   <input type="text" name="comuna" id="comuna" value="" placeholder="Comuna/Departamento/Partido" data-mini="true" required="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="provincia">Provincia:</label>
+					   <label for="provincia">Provincia: *</label>
 					   <input type="text" name="provincia" id="provincia" value="" required="true" placeholder="Provincia" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="pais">País:</label>
+					   <label for="pais">País: *</label>
 					   <input type="text" name="pais" id="pais" value="" required="true" placeholder="País" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
@@ -187,7 +189,7 @@
 					   <input type="text" name="horario" id="horario" value="" placeholder="Horario de atención" data-mini="true">
 				   </div>
 				   <div data-role="fieldcontain">
-					   <label for="latlong">Ubicación GPS:</label>
+					   <label for="sugerencia-mostrargeolocalizacion">Ubicación GPS:</label>
 					   <div id="latlong">
 							<input type="hidden" id="sugerencia-latitud" name="latitud" value="">
 							<input type="hidden" id="sugerencia-longitud" name="longitud" value="">

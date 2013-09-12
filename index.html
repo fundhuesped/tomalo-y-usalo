@@ -172,86 +172,105 @@
 				<strong><span class="nueva-sugerencia-label">SUGERIR NUEVO LUGAR</span><span class="correccion-label">SUGERIR CORRECCIÓN</span></strong>
             </div><!-- /header -->
            <div data-role="content">
-			   <p><span class="correccion-label">A continuación llene únicamente los datos del establecimiento que considera erróneos.</span><span class="nueva-sugerencia-label">A continuación llene el formulario con el nuevo establecimiento. Con * se encuentran marcados los campos requeridos.</span></p>
-			   <hr >
-			   <form id="nuevasugerencia" action="http://www.huesped.org.ar/donde/sugerencias/nueva" method="post" data-ajax="false">
-				   <input id="cartodbid-correccion" type="hidden" name="cartodbid" value="">
-				   <div data-role="fieldcontain">
-					   <label for="nombre">Nombre del establecimiento: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="tipo">Tipo del establecimiento: <span class="nueva-sugerencia-label">*</span></label>
-					   <select name="tipo" id="tipo" data-mini="true">
-						   <option value="centrodesalud">Centro de Salud/Hospital</option>
-						   <option value="gubernamental">Dependencia Gubernamental</option>
-						   <option value="comunitario">Centro Comunitario/Cultural/Plaza</option>
-						   <option value="educativo">Centro Educativo</option>
-						   <option value="ong">ONG</option>
-						   <option value="otros">Otros</option>
-					   </select>
-				   </div>
-				   <div data-role="fieldcontain">
-						<label for="testeo">¿Se puede realizar un testeo?</label>
-						<select name="testeo" id="testeo" data-role="slider" data-mini="true">
-							<option value="no">No</option>
-							<option value="si">Si</option>
-						</select>
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="calle">Calle: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="calle" id="calle" value="" placeholder="Calle" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="altura">Altura: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="tel" name="altura" id="altura" value="" placeholder="Altura" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="pisodepto">Piso y depto:</label>
-					   <input type="text" name="pisodepto" id="pisodepto" value="" placeholder="Piso y depto" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="barrio">Barrio/Localidad: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="barrio" id="barrio" value="" placeholder="Barrio/Localidad" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="comuna">Comuna/Departamento/Partido: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="comuna" id="comuna" value="" placeholder="Comuna/Departamento/Partido" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="provincia">Provincia: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="provincia" id="provincia" value="" placeholder="Provincia" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="pais">País: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="pais" id="pais" value="" placeholder="País" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="tel">Tel:</label>
-					   <input type="tel" name="tel" id="tel" value="" placeholder="Teléfono" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="horario">Horario:</label>
-					   <input type="text" name="horario" id="horario" value="" placeholder="Horario de atención" data-mini="true">
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="sugerencia-mostrargeolocalizacion">Ubicación GPS:</label>
-					   <div id="latlong">
-							<input type="hidden" id="sugerencia-latitud" name="latitud" value="">
-							<input type="hidden" id="sugerencia-longitud" name="longitud" value="">
-							<input type="hidden" id="sugerencia-precision" name="precision" value="">
-							<input type="text" id="sugerencia-mostrargeolocalizacion" data-inline="true" data-wrapperels="span" readonly disabled="disabled" data-mini="true" placeholder="Latitud y longitud">
-							<input type="button" id="geolocalizar" data-role="button" data-icon="home" data-iconpos="top" data-mini="true" data-inline="true" data-iconshadow="true" data-shadow="true" data-wrapperels="span" value="Localizar con GPS">
+			   <div class="nueva-sugerencia-label">
+				   <p>A continuación llene el formulario con el nuevo establecimiento. Con * se encuentran marcados los campos requeridos.</p>
+					<hr >
+				   <form id="nuevasugerencia" action="http://www.huesped.org.ar/donde/sugerencias/nueva" method="post" data-ajax="false">
+					   <div data-role="fieldcontain">
+						   <label for="nombre">Nombre del establecimiento: *</label>
+						   <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre" data-mini="true" required="required">
 					   </div>
-				   </div>
-				   <div data-role="fieldcontain">
-					   <label for="observaciones">Observaciones:</label>
-					   <textarea cols="40" rows="8" name="observaciones" id="observaciones" data-mini="true"></textarea>
-				   </div>
-				   <fieldset>
-						<input type="submit" value="Enviar" data-inline="true" />
-				   </fieldset>
-			   </form>
+					   <div data-role="fieldcontain">
+						   <label for="tipo">Tipo del establecimiento: *</label>
+						   <select name="tipo" id="tipo" data-mini="true">
+							   <option value="centrodesalud">Centro de Salud/Hospital</option>
+							   <option value="gubernamental">Dependencia Gubernamental</option>
+							   <option value="comunitario">Centro Comunitario/Cultural/Plaza</option>
+							   <option value="educativo">Centro Educativo</option>
+							   <option value="ong">ONG</option>
+							   <option value="otros">Otros</option>
+						   </select>
+					   </div>
+					   <div data-role="fieldcontain">
+							<label for="testeo">¿Se puede realizar un testeo?</label>
+							<select name="testeo" id="testeo" data-role="slider" data-mini="true">
+								<option value="no">No</option>
+								<option value="si">Si</option>
+							</select>
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="calle">Calle: *</label>
+						   <input type="text" name="calle" id="calle" value="" placeholder="Calle" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="altura">Altura: *</label>
+						   <input type="tel" name="altura" id="altura" value="" placeholder="Altura" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="pisodepto">Piso y depto:</label>
+						   <input type="text" name="pisodepto" id="pisodepto" value="" placeholder="Piso y depto" data-mini="true">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="barrio">Barrio/Localidad: *</label>
+						   <input type="text" name="barrio" id="barrio" value="" placeholder="Barrio/Localidad" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="comuna">Comuna/Departamento/Partido: *</label>
+						   <input type="text" name="comuna" id="comuna" value="" placeholder="Comuna/Departamento/Partido" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="provincia">Provincia: *</label>
+						   <input type="text" name="provincia" id="provincia" value="" placeholder="Provincia" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="pais">País: *</label>
+						   <input type="text" name="pais" id="pais" value="" placeholder="País" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="tel">Tel:</label>
+						   <input type="tel" name="tel" id="tel" value="" placeholder="Teléfono" data-mini="true">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="horario">Horario:</label>
+						   <input type="text" name="horario" id="horario" value="" placeholder="Horario de atención" data-mini="true">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="sugerencia-mostrargeolocalizacion">Ubicación GPS:</label>
+						   <div id="latlong">
+								<input type="hidden" id="sugerencia-latitud" name="latitud" value="">
+								<input type="hidden" id="sugerencia-longitud" name="longitud" value="">
+								<input type="hidden" id="sugerencia-precision" name="precision" value="">
+								<input type="text" id="sugerencia-mostrargeolocalizacion" data-inline="true" data-wrapperels="span" readonly disabled="disabled" data-mini="true" placeholder="Latitud y longitud">
+								<input type="button" id="geolocalizar" data-role="button" data-icon="home" data-iconpos="top" data-mini="true" data-inline="true" data-iconshadow="true" data-shadow="true" data-wrapperels="span" value="Localizar con GPS">
+						   </div>
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="observaciones">Observaciones:</label>
+						   <textarea cols="40" rows="8" name="observaciones" id="observaciones" data-mini="true"></textarea>
+					   </div>
+					   <fieldset>
+							<input type="submit" value="Enviar" data-inline="true" />
+					   </fieldset>
+				   </form>
+				</div>
+				<div class="correccion-label">
+					<p>A continuación indique que considera erróneo en el centro.</p>
+					<hr >
+					<form id="nuevasugerencia" action="http://www.huesped.org.ar/donde/sugerencias/nueva" method="post" data-ajax="false">
+						<input id="cartodbid-correccion" type="hidden" name="cartodbid" value="">
+					   <div data-role="fieldcontain">
+						   <label for="nombre">Nombre del establecimiento: *</label>
+						   <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre" data-mini="true" required="required">
+					   </div>
+					   <div data-role="fieldcontain">
+						   <label for="observaciones">Observaciones:</label>
+						   <textarea cols="40" rows="8" name="observaciones" id="observaciones" data-mini="true"></textarea>
+					   </div>
+						<fieldset>
+							<input type="submit" value="Enviar" data-inline="true" />
+						</fieldset>
+					</form>
+				</div>
            </div><!-- /content -->
             <div data-role="footer" data-position="fixed" data-theme="none" data-tap-toggle="false">
                 <a href="#test-menu" data-rel="back" data-direction="reverse" class="back-button-footer" data-theme="none"></a></li>

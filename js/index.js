@@ -87,9 +87,15 @@ var app = {
 			e.preventDefault();
 			//run an AJAX post request to your server-side script, $this.serialize() is the data from your form being added to the request
 			$.post($this.attr('action'), $this.serialize(), function (responseData) {
-
+				$("#info-dialog-msg").html("Los datos se han enviado correctamente. Muchas gracias.");
 			})
-			.always( function() { $(".ui-loader").hide(); });
+			.fail( function() {
+				$("#info-dialog-msg").html("Ha ocurrido un error al enviar su sugerencia, intente de nuevo mas tarde. Muchas gracias.");
+			})
+			.always( function() { 
+				$(".ui-loader").hide();
+				$.mobile.changePage("#info-dialog");
+			});
 		});
     },
     // deviceready Event Handler

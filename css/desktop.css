@@ -62,3 +62,20 @@
 	margin-right: 18%;
 	float: right;
 }
+
+#tomalo-y-usalo-logo {
+	width:40%;
+	height:40%;
+	top: 30%;
+	left: 30%;
+	position: absolute;
+	display: inline-block;
+}
+
+#tomalo-y-usalo-logo #imagen {
+	background-image: url('../img/tomalo_y_usalo_logo.png');
+	background-size: auto 100%;
+	width: 150px;
+	height: 200px;
+	display: inline-block;
+}

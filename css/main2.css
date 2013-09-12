@@ -332,3 +332,7 @@ div.cartodb-popup .jspContainer:before {
 .correccion-label {
 	display: none;
 }
+
+#desktop-home {
+	display: none;
+}

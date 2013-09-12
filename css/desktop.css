@@ -45,6 +45,7 @@
 	background-color: #E2001A;
 }
 
+
 #desktop-main-test, #desktop-main-preservativo {
 	background-size: 100% auto;
 	height: 250px;
@@ -53,21 +54,27 @@
 
 #desktop-main-test {
 	background-image: url('../img/jeringa-desktop.png');
-	margin-left: 18%;
-	float: left;
 }
 
 #desktop-main-preservativo {
 	background-image: url('../img/preservativo-desktop.png');
-	margin-right: 18%;
-	float: right;
+}
+
+.center-logos {
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	align: center;
+	text-align: center;
+	width: 250px !important;
+	height: 250px !important;
 }
 
 #tomalo-y-usalo-logo {
-	width:40%;
-	height:40%;
-	top: 30%;
-	left: 30%;
+	width:30%;
+	height:30%;
+	top: 32%;
+	left: 35%;
 	position: absolute;
 	display: table;
 }

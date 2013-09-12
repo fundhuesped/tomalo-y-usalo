@@ -328,3 +328,7 @@ div.cartodb-popup .jspContainer:before {
     color: #fff;
     text-shadow: none;
 }
+
+.correccion-label {
+	display: none;
+}

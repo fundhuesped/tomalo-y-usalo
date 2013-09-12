@@ -27,7 +27,8 @@ function mapa_init(idContenedorMapa, idAutocompleteInput, cartodblayer, tooltipT
         //tooltips
         var sublayer = layer.getSubLayer(0);
         sublayer.infowindow.set('template', $('#'+tooltipTplId).html());
-        sublayer.on('featureOver', function(e, pos, latlng, data) {
+        sublayer.on('featureClick', function(e, pos, latlng, data) {
+			app.env.selected_cartodbid = data.cartodb_id;
       });
 
       sublayer.on('error', function(err) {

@@ -21,7 +21,8 @@ var pgReady = $.Deferred();
 
 var app = {
 	env: {
-		geolocate: false
+		geolocate: true,
+		selected_cartodbid: -1
 	},
     // Application Constructor
     initialize: function() {
@@ -96,6 +97,22 @@ var app = {
 				$(".ui-loader").hide();
 				$.mobile.changePage("#info-dialog");
 			});
+		});
+		$(".nueva-sugerencia-link").click( function(e) {
+			app.env.selected_cartodbid = -1;
+		});
+		$("#nueva-sugerencia-test-page").on("pageshow", function(e, data) {
+			if (app.env.selected_cartodbid > -1) {
+				$("#cartodbid-correccion").val(app.env.selected_cartodbid);
+				$(".correccion-label").show();
+				$(".nueva-sugerencia-label").hide();
+				// es una correccion.
+			} else {
+				$(".nueva-sugerencia-label").show();
+				$(".correccion-label").hide();
+				$("#cartodbid-correccion").val(-1);
+				// no es una correccion, es una nueva sugerencia.
+			}
 		});
     },
     // deviceready Event Handler

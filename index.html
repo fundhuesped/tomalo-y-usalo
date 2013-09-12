@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="spec/jquery-mobile/jquery.mobile.css" />
         <link rel="stylesheet" type="text/css" href="css/cartodb.css" />
         <link rel="stylesheet" type="text/css" href="css/main3.css" />
+        <link rel="stylesheet" media="only screen and (min-width: 900px)" href="css/desktop.css" />
         <title>Tomalo y Usalo App | Fundación Huésped</title>
         <meta name="description" content="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos.">
         <meta name="author" content="Fundación Huésped">
@@ -24,21 +25,57 @@
         <div data-role="page" id="start" class="home-buscar" data-theme="none">
             <!-- content -->
             <div data-role="content" data-theme="none">
-				<div>
-				<a href="#test-page" id="busca-test-main-link">
-					<img src="img/busca-test.png" id="busca-test-image"/>
-				</a>
+				<div class="mobile-home">
+					<div>
+					<a href="#test-page" id="busca-test-main-link">
+						<img src="img/busca-test.png" id="busca-test-image"/>
+					</a>
+					</div>
+					<div>
+					<a href="#preservativos-page" id="busca-preservativo-main-link">
+						<img src="img/busca-preservativo.png" id="busca-preservativo-image"/>
+					</a>
+					</div>
+					<div>
+						<p>Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos.</p>
+					</div>
 				</div>
-				<div>
-				<a href="#preservativos-page" id="busca-preservativo-main-link">
-					<img src="img/busca-preservativo.png" id="busca-preservativo-image"/>
-				</a>
-				</div>
-				<div>
-					<p>Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos.</p>
+				<div class="desktop-home">
+					<div id="tomalo-y-usalo-logo">
+						<div id="logo-table">
+							<div id="imagen"></div>
+							<div style="margin-top: 40px;">
+								<a href="http://www.huesped.org.ar" rel="external">
+									<img src="img/logo-huesped.png" style="background-color: white; padding: 15px;"/>
+								</a>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<li class="test-side">
+							<div>
+								<div class="center-logos">
+									<a href="#test-page" data-theme="none" style="height: 250px; width: 250px;">
+										<div id="desktop-main-test"></div>
+									</a>
+								</div>
+								<div><p>Dónde hacerte el Test</p></div>
+							</div>
+						</li>
+						<li class="preservativo-side">
+							<div>
+								<div class="center-logos">
+									<a href="#preservativos-page" data-theme="none">
+										<div id="desktop-main-preservativo"></div>
+									</a>
+								</div>
+								<div><p>Dónde buscar Preservativos</p></div>
+							</div>
+						</li>
+					</ul>
 				</div>
             </div>
-			<div data-role="footer" data-position="fixed" data-theme="none">
+			<div data-role="footer" data-position="fixed" data-theme="none" class="mobile-home">
 				<a href="http://huesped.org.ar" class="flex-item-nowrap" id="huesped-logo-link" data-theme="none">
 					<img src="img/logo-huesped.png" id="huesped-logo-image"/>
 				</a>

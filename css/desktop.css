@@ -1,0 +1,108 @@
+.mobile-home {
+	display: none;
+}
+
+.desktop-home {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.home-buscar .ui-content, .home-buscar ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.home-buscar ul, .home-buscar .ui-content, .home-buscar {
+	height: 100% !important;
+}
+
+.home-buscar {
+	padding-bottom: 0px !important;
+}
+
+
+.desktop-home ul {
+	display: table;
+	width: 100%;
+}
+
+.desktop-home li {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.desktop-home .test-side, .desktop-home .preservativo-side {
+	width: 50%;
+	height: 100%;
+}
+
+.desktop-home .test-side {
+	background-color: #00a4a7;
+}
+
+.desktop-home .preservativo-side p {
+	color: #00a4a7;
+}
+
+.desktop-home .preservativo-side {
+	background-color: #E2001A;
+}
+
+.desktop-home .test-side p {
+	color: #E2001A;
+}
+
+
+#desktop-main-test, #desktop-main-preservativo {
+	background-size: 100% auto;
+	height: 250px;
+	width: 250px;
+}
+
+#desktop-main-test {
+	background-image: url('../img/jeringa-desktop.png');
+}
+
+#desktop-main-preservativo {
+	background-image: url('../img/preservativo-desktop.png');
+}
+
+.center-logos {
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	align: center;
+	text-align: center;
+	width: 250px !important;
+	height: 250px !important;
+}
+
+#tomalo-y-usalo-logo {
+	width:30%;
+	height:30%;
+	top: 32%;
+	left: 35%;
+	position: absolute;
+	display: table;
+}
+
+#tomalo-y-usalo-logo #logo-table {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+#tomalo-y-usalo-logo #imagen {
+	background-image: url('../img/tomalo_y_usalo_logo.png');
+	background-size: auto 75%;
+	width: 250px;
+	height: 250px;
+	display: inline-block;
+	background-color: white;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 125px;
+}

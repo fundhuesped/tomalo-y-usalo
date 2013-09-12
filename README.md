@@ -5,6 +5,18 @@ Tomalo y Usalo
 
 Fue desarrollada por Fundación Huésped con el apoyo del equipo de la DG de Información y Gobierno Abierto del Gobierno de la Ciudad de Buenos Aires. La idea original se presentó en Desarrollando América Latina (DAL) 2012 y se terminó de diseñar en un hackaton interno en el laboratorio de innovación de la DG de Información y Gobierno Abierto.
 
+Basado en el prototipo:
+Tomalo y Usalo.
+Prototipo creado en Desarrollando América Latina 2012
+Puntos de retiro de preservativos geolocalizados usando Google Maps y jQuery.
+Utiliza la capacidad de geolocalización para navegadores modernos.
+Idea original: Rudi Borrmann
+Coder: Dan Zadjband https://github.com/danzajdband/tomalo
+Frontend: Davo Galavotti, Esteban Bianchi
+Data handling: Natalia Sampietro, Matias Saguir
+Diseño de marca: Dafna Nudelman, Mar Canet, Carlos Wydler y Davo Galavotti.
+
+
 Links
 =====
 

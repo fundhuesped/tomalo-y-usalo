@@ -71,8 +71,14 @@ var app = {
 		$("#preservativos-search-panel-button").click( function(e) {
 			$(".preservativos-autocomplete-menu").toggle();
 		});
-
-        //document.addEventListener('deviceready', this.onDeviceReady, false);
+		$("#geolocalizar").click(function(e) {
+			navigator.geolocation.getCurrentPosition(function(geoposition) {
+				$("#sugerencia-latitud").val(geoposition.coords.latitude);
+				$("#sugerencia-longitud").val(geoposition.coords.longitude);
+				$("#sugerencia-precision").val(geoposition.coords.accuracy);
+				$("#sugerencia-mostrargeolocalizacion").val(geoposition.coords.latitude + ", "+ geoposition.coords.longitude);
+			});
+		});
     },
     // deviceready Event Handler
     //

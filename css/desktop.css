@@ -38,16 +38,27 @@
 }
 
 .desktop-home .test-side {
-	background-color: #E2001A;
-}
-
-.desktop-home .preservativo-side {
 	background-color: #00a4a7;
 }
 
-.desktop-home .test-side a {
-
+.desktop-home .preservativo-side {
+	background-color: #E2001A;
 }
 
-.desktop-home .preservativo-side a {
+#desktop-main-test, #desktop-main-preservativo {
+	background-size: 300px 300px;
+	height: 300px;
+	width: 300px;
+}
+
+#desktop-main-test {
+	background-image: url('../img/jeringa-desktop.png');
+	margin-left: 18%;
+	float: left;
+}
+
+#desktop-main-preservativo {
+	background-image: url('../img/preservativo-desktop.png');
+	margin-right: 18%;
+	float: right;
 }

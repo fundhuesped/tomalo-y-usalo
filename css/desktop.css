@@ -87,8 +87,7 @@
 	height: 250px;
 	display: inline-block;
 	background-color: white;
-	background-position-x: center;
-	background-position-y: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	border-radius: 125px;
 }

@@ -40,7 +40,7 @@
 
 .desktop-home .test-side {
 	background-color: #00a4a7;
-	padding-right: 100px;
+	padding-right: 160px;
 }
 
 .desktop-home p {
@@ -50,7 +50,7 @@
 
 .desktop-home .preservativo-side {
 	background-color: #E2001A;
-	padding-left: 100px;
+	padding-left: 160px;
 }
 
 
@@ -79,10 +79,10 @@
 }
 
 #tomalo-y-usalo-logo {
-	width:40%;
-	height:40%;
-	top: 30%;
-	left: 30%;
+	width:45%;
+	height:45%;
+	top: 27.5%;
+	left: 27.5%;
 	position: absolute;
 	display: table;
 }
@@ -97,12 +97,12 @@
 
 #tomalo-y-usalo-logo #imagen {
 	background-image: url('../img/tomalo_y_usalo_logo.png');
-	background-size: auto 65%;
-	width: 350px;
-	height: 350px;
+	background-size: auto 58%;
+	width: 410px;
+	height: 410px;
 	display: inline-block;
 	background-color: white;
 	background-position: center center;
 	background-repeat: no-repeat;
-	border-radius: 175px;
+	border-radius: 205px;
 }

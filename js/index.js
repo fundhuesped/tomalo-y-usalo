@@ -114,6 +114,12 @@ var app = {
 				// no es una correccion, es una nueva sugerencia.
 			}
 		});
+		$("#ir-a-testeo").click( function(e) {
+			$.mobile.changePage("#test-page");
+		});
+		$("#ir-a-preservativos").click( function(e) {
+			$.mobile.changePage("#preservativos-page");
+		});
     },
     // deviceready Event Handler
     //

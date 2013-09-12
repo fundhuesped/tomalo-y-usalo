@@ -106,3 +106,7 @@
 	background-repeat: no-repeat;
 	border-radius: 205px;
 }
+
+#ir-a-preservativos, #ir-a-testeo {
+	cursor: pointer;
+}

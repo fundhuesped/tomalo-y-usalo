@@ -35,22 +35,22 @@
 .desktop-home .test-side, .desktop-home .preservativo-side {
 	width: 50%;
 	height: 100%;
+	padding-top: 150px;
 }
 
 .desktop-home .test-side {
 	background-color: #00a4a7;
+	padding-right: 100px;
 }
 
-.desktop-home .preservativo-side p {
-	color: #00a4a7;
+.desktop-home p {
+	color: white;
+	font-size: 20px;
 }
 
 .desktop-home .preservativo-side {
 	background-color: #E2001A;
-}
-
-.desktop-home .test-side p {
-	color: #E2001A;
+	padding-left: 100px;
 }
 
 
@@ -79,10 +79,10 @@
 }
 
 #tomalo-y-usalo-logo {
-	width:30%;
-	height:30%;
-	top: 32%;
-	left: 35%;
+	width:40%;
+	height:40%;
+	top: 30%;
+	left: 30%;
 	position: absolute;
 	display: table;
 }
@@ -97,12 +97,12 @@
 
 #tomalo-y-usalo-logo #imagen {
 	background-image: url('../img/tomalo_y_usalo_logo.png');
-	background-size: auto 75%;
-	width: 250px;
-	height: 250px;
+	background-size: auto 65%;
+	width: 350px;
+	height: 350px;
 	display: inline-block;
 	background-color: white;
 	background-position: center center;
 	background-repeat: no-repeat;
-	border-radius: 125px;
+	border-radius: 175px;
 }

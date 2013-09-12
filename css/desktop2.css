@@ -80,8 +80,9 @@
 }
 
 #tomalo-y-usalo-logo {
-	width:100%;
+	width:45%;
 	top: 27.5%;
+	left: 27.5%;
 	position: absolute;
 	text-align: center;
 	display: block;

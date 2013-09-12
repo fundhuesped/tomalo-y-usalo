@@ -41,8 +41,16 @@
 	background-color: #00a4a7;
 }
 
+.desktop-home .preservativo-side p {
+	color: #00a4a7;
+}
+
 .desktop-home .preservativo-side {
 	background-color: #E2001A;
+}
+
+.desktop-home .test-side p {
+	color: #E2001A;
 }
 
 

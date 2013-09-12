@@ -182,7 +182,14 @@
 				   </div>
 				   <div data-role="fieldcontain">
 					   <label for="tipo">Tipo del establecimiento: <span class="nueva-sugerencia-label">*</span></label>
-					   <input type="text" name="tipo" id="tipo" value="" placeholder="Tipo" data-mini="true">
+					   <select name="tipo" id="tipo" data-mini="true">
+						   <option value="centrodesalud">Centro de Salud/Hospital</option>
+						   <option value="gubernamental">Dependencia Gubernamental</option>
+						   <option value="comunitario">Centro Comunitario/Cultural/Plaza</option>
+						   <option value="educativo">Centro Educativo</option>
+						   <option value="ong">ONG</option>
+						   <option value="otros">Otros</option>
+					   </select>
 				   </div>
 				   <div data-role="fieldcontain">
 						<label for="testeo">¿Se puede realizar un testeo?</label>

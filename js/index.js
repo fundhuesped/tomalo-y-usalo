@@ -38,8 +38,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
 		app.env.geolocate = true;
-        var tests = "http://fundhuesped.cartodb.com/api/v2/viz/d411feb8-f3c1-11e2-a45e-ddabda956258/viz.json";
-        var buscar_preservativos = "http://fundhuesped.cartodb.com/api/v2/viz/9d28261a-f3c2-11e2-b703-417053fa0b43/viz.json";
+        var tests = "http://fundhuesped.cartodb.com/api/v2/viz/6e72a246-20ae-11e3-b014-c7356bf9cc05/viz.json";
+        var buscar_preservativos = "http://fundhuesped.cartodb.com/api/v2/viz/eecfd722-20ab-11e3-9492-0598d4d2fd17/viz.json";
         $("#preservativos-page").on('pageshow', function(e, data){
             if (!app.env.geolocate) {
 				$(".preservativos-autocomplete-menu").show();

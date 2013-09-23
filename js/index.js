@@ -80,7 +80,7 @@ var app = {
 				$("#sugerencia-mostrargeolocalizacion").val(geoposition.coords.latitude + ", "+ geoposition.coords.longitude);
 			});
 		});
-		$("#nuevasugerencia").submit(function(e) {
+		$(".nuevasugerencia").submit(function(e) {
 			$(".ui-loader").show();
 			//cache the form element for use in this function
 			var $this = $(this);
